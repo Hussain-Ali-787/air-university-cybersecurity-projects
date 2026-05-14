@@ -52,7 +52,7 @@ The enhanced version improves the original coursework project with cleaner code 
 ## Firewall Workflow
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Load Rules] --> B[Read Packets]
     B --> C[Validate Packet]
     C --> D[Compare with Rules]

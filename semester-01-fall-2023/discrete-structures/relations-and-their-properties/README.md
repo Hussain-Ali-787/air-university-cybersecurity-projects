@@ -207,7 +207,7 @@ A directed graph, or digraph, can represent a relation.
 ## Visual Concept Flow
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Sets] --> B[Cartesian Product]
     B --> C[Relations]
     C --> D[Relation Properties]
