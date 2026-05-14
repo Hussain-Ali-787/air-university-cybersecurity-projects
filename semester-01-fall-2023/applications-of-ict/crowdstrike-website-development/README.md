@@ -155,7 +155,7 @@ The project presents CrowdStrike as a cybersecurity company focused on endpoint 
 ## Website Development Workflow
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Select Cybersecurity Company] --> B[Research Company and Product]
     B --> C[Plan Website Pages]
     C --> D[Design Website in Wix]
