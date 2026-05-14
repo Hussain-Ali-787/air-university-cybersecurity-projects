@@ -111,11 +111,10 @@ john --wordlist=jazib.txt --format=Raw-MD5 password1.txt
 hash-cracking-john-the-ripper/
 │
 ├── README.md
+├── DEMO_NOTES.md
 ├── presentation/
-│   └── CYS Project (Light).pptx
-├── docs/
-├── screenshots/
-└── demo-notes/
+│   └── Hash-Cracking_CYS_ppt.pptx
+└── screenshots/
 ```
 
 ## Ethical Notice
