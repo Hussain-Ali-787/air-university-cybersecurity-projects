@@ -99,7 +99,7 @@ Gaussian Elimination transforms the augmented matrix `[A | b]` into row echelon 
 flowchart TD
     A[Input number of unknowns] --> B[Input coefficient matrix A]
     B --> C[Input constants vector b]
-    C --> D[Form augmented matrix A|b]
+    C --> D["Form augmented matrix [A : b]"]
     D --> E[Select pivot using partial pivoting]
     E --> F[Perform row elimination]
     F --> G[Check consistency and rank]
