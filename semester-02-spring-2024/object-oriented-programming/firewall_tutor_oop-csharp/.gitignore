@@ -1,0 +1,27 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+output/
+!output/.gitkeep
+
+
+# .NET / Visual Studio build artifacts
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.exe
+*.dll
+*.pdb
+
+# Runtime output
+output/*.csv
+!output/.gitkeep
