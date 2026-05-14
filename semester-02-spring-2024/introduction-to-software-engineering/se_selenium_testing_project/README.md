@@ -3,7 +3,7 @@
 ![Course](https://img.shields.io/badge/Course-Introduction%20to%20Software%20Engineering-blue)
 ![Tool](https://img.shields.io/badge/Tool-Selenium-green)
 ![Testing](https://img.shields.io/badge/Testing-Automation%20Testing-orange)
-![Type](https://img.shields.io/badge/Type-Report%20%2B%20Presentation-lightgrey)
+![Type](https://img.shields.io/badge/Type-Report%20%2B%20Presentation%20%2B%20Demo-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ## Overview
