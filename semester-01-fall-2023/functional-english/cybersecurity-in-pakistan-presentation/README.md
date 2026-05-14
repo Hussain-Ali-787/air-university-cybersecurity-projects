@@ -20,35 +20,35 @@ The presentation discusses Pakistan’s increasing dependence on digital technol
 
 ### Title Slide
 
-![Title Slide](screenshots/title-slide.png)
+![Title Slide](screenshots/title-slide.PNG)
 
 ### Table of Contents
 
-![Table of Contents](screenshots/table-of-contents.png)
+![Table of Contents](screenshots/table-of-contents.PNG)
 
 ### Current State
 
-![Current State](screenshots/current-state.png)
+![Current State](screenshots/current-state.PNG)
 
 ### Recent Attacks
 
-![Recent Attacks](screenshots/recent-attacks.png)
+![Recent Attacks](screenshots/recent-attacks.PNG)
 
 ### Causes of Cyberattacks
 
-![Attack Causes](screenshots/attack-causes.png)
+![Attack Causes](screenshots/attack-causes.PNG)
 
 ### Impact of Attacks
 
-![Impact of Attacks](screenshots/impact-of-attacks.png)
+![Impact of Attacks](screenshots/impact-of-attacks.PNG)
 
 ### Initiatives
 
-![Initiatives](screenshots/initiatives.png)
+![Initiatives](screenshots/initiatives.PNG)
 
 ### Conclusion
 
-![Conclusion](screenshots/conclusion.png)
+![Conclusion](screenshots/conclusion.PNG)
 
 ---
 

@@ -148,14 +148,14 @@ telecom-cybersecurity-presentation/
 │   └── Telecom_Cybersecurity_ICT.pptx
 │
 └── screenshots/
-    ├── title-slide.png
-    ├── outline.png
-    ├── telecom-stakeholders.png
-    ├── telecom-cybersecurity-importance.png
-    ├── telecom-attacks.png
-    ├── defense-strategies.png
-    ├── pakistan-perspective.png
-    └── conclusion.png
+    ├── title-slide.JPG
+    ├── outline.JPG
+    ├── telecom-stakeholders.JPG
+    ├── telecom-cybersecurity-importance.JPG
+    ├── telecom-attacks.JPG
+    ├── defense-strategies.JPG
+    ├── pakistan-perspective.JPG
+    └── conclusion.JPG
 ```
 
 ---
