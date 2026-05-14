@@ -20,35 +20,35 @@ The presentation explains how telecommunication networks support modern communic
 
 ### Title Slide
 
-![Title Slide](screenshots/title-slide.png)
+![Title Slide](screenshots/title-slide.JPG)
 
 ### Outline
 
-![Outline](screenshots/outline.png)
+![Outline](screenshots/outline.JPG)
 
 ### Telecom Stakeholders
 
-![Telecom Stakeholders](screenshots/telecom-stakeholders.png)
+![Telecom Stakeholders](screenshots/telecom-stakeholders.JPG)
 
 ### Why Cybersecurity Matters in Telecom
 
-![Telecom Cybersecurity Importance](screenshots/telecom-cybersecurity-importance.png)
+![Telecom Cybersecurity Importance](screenshots/telecom-cybersecurity-importance.JPG)
 
 ### Cyberattacks in Telecom
 
-![Telecom Attacks](screenshots/telecom-attacks.png)
+![Telecom Attacks](screenshots/telecom-attacks.JPG)
 
 ### Defense Strategies
 
-![Defense Strategies](screenshots/defense-strategies.png)
+![Defense Strategies](screenshots/defense-strategies.JPG)
 
 ### Pakistan Perspective
 
-![Pakistan Perspective](screenshots/pakistan-perspective.png)
+![Pakistan Perspective](screenshots/pakistan-perspective.JPG)
 
 ### Conclusion
 
-![Conclusion](screenshots/conclusion.png)
+![Conclusion](screenshots/conclusion.JPG)
 
 ---
 

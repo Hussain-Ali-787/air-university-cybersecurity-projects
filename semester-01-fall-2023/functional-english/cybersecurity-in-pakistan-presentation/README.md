@@ -140,14 +140,14 @@ cybersecurity-in-pakistan-presentation/
 │   └── Cybersecurity_in_Pakistan_Functional_English.pptx
 │
 └── screenshots/
-    ├── title-slide.png
-    ├── table-of-contents.png
-    ├── current-state.png
-    ├── recent-attacks.png
-    ├── attack-causes.png
-    ├── impact-of-attacks.png
-    ├── initiatives.png
-    └── conclusion.png
+    ├── title-slide.PNG
+    ├── table-of-contents.PNG
+    ├── current-state.PNG
+    ├── recent-attacks.PNG
+    ├── attack-causes.PNG
+    ├── impact-of-attacks.PNG
+    ├── initiatives.PNG
+    └── conclusion.PNG
 ```
 
 ---
