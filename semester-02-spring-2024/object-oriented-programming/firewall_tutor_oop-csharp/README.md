@@ -156,7 +156,7 @@ The enhanced version improves the project by making it:
 ## Firewall Logic
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Home Dashboard] --> B[Load Rules]
     B --> C[Load Packets]
     C --> D[Run Simulation]
