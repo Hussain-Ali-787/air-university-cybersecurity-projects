@@ -72,7 +72,7 @@ The project explains how password hashes work, why weak passwords are vulnerable
 ## Demonstration Workflow
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Create Dummy Password] --> B[Generate MD5 Hash]
     B --> C[Save Hash in Text File]
     C --> D[Create Custom Wordlist using CUPP]
