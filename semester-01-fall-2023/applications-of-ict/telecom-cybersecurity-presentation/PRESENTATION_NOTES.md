@@ -4,6 +4,8 @@
 
 These notes summarize the main ideas from the presentation on **Importance of Cybersecurity in Telecommunication**.
 
+This version keeps the original Semester 1 design style and only improves content clarity, typography, alignment, and wording.
+
 ---
 
 ## Main Idea
@@ -24,88 +26,18 @@ Telecommunication networks are critical infrastructure. They support communicati
 
 ---
 
-## Telecom Stakeholders
+## Suggested Screenshots
 
-The presentation identifies several telecom stakeholders:
-
-- Consumers
-- Telecom operators
-- Telecom equipment vendors
-- Telecom infrastructure providers
-- Regulatory bodies
-
----
-
-## Why Telecom Cybersecurity Is Important
-
-Telecom cybersecurity matters because:
-
-- Telecom companies hold sensitive customer data.
-- Telecom networks are critical infrastructure.
-- Telecom systems are increasingly interconnected.
-- Telecom companies are attractive ransomware targets.
-
----
-
-## Attack Types
-
-Important cyberattacks discussed:
-
-- Data theft and breaches
-- DDoS attacks
-- Phishing
-- Man-in-the-middle attacks
-- Malware attacks
-- SIM card cloning
-- Insider threats
-
----
-
-## Impact Areas
-
-Cyberattacks can cause:
-
-- Disruption of communication services
-- Data breaches and privacy concerns
-- Financial losses
-- Reputation damage
-- Regulatory consequences
-- Loss of public trust
-
----
-
-## Defensive Measures
-
-Key cybersecurity controls include:
-
-- Network monitoring
-- Threat detection
-- Multi-layered security
-- Employee training
-- Incident response plans
-- Patch management
-- User authentication
-- Access control
-- Data encryption
-- Cybersecurity expert collaboration
-
----
-
-## Pakistan Perspective
-
-The presentation discusses Pakistan’s telecom cybersecurity environment, including regulatory bodies, cybercrime investigation, security guidelines, public awareness, mobile banking security, critical infrastructure protection, and IoT security concerns.
-
----
-
-## International Perspective
-
-The presentation mentions international organizations such as:
-
-- International Telecommunication Union
-- United Nations
-- OECD
-
-These organizations support cybersecurity frameworks, policy guidance, and international cooperation.
+```text
+screenshots/title-slide.png
+screenshots/outline.png
+screenshots/telecom-stakeholders.png
+screenshots/telecom-cybersecurity-importance.png
+screenshots/telecom-attacks.png
+screenshots/defense-strategies.png
+screenshots/pakistan-perspective.png
+screenshots/conclusion.png
+```
 
 ---
 

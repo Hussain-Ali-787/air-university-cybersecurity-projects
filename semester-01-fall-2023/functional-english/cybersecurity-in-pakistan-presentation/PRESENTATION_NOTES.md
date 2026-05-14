@@ -4,6 +4,8 @@
 
 These notes summarize the main points from the presentation on **The Current State of Cybersecurity in Pakistan**.
 
+This version keeps the original Semester 1 design style and only improves content clarity, grammar, typography, alignment, and wording.
+
 ---
 
 ## Main Idea
@@ -24,60 +26,18 @@ Pakistan’s use of digital technology is increasing, which also increases the i
 
 ---
 
-## Current Status
+## Suggested Screenshots
 
-The presentation highlights that Pakistan has faced a rise in cyberattacks targeting individuals and organizations. It also notes that awareness has started improving as universities and organizations promote cybersecurity education.
-
----
-
-## Recent Attacks
-
-The presentation discusses:
-
-- NADRA-related data security concerns
-- Banking sector attacks involving compromised cards
-
----
-
-## Why Attacks Happen
-
-Key reasons mentioned:
-
-- Low cybersecurity awareness
-- Poor implementation of cyber laws
-- Weak infrastructure
-- Social engineering
-- Human error
-- Lack of mature cybersecurity practices
-
----
-
-## Impact of Attacks
-
-Cyberattacks may result in:
-
-- Financial losses
-- Business disruption
-- Sensitive data exposure
-- Privacy issues
-- Availability issues
-- National security risks
-
----
-
-## Suggested Improvements
-
-The presentation recommends:
-
-- National cybersecurity strategy
-- Awareness campaigns
-- Collaboration
-- Cybersecurity education and training
-- Incident response capabilities
-- Information sharing
-- Research and development
-- Cybersecurity standards
-- Stronger cyber laws and regulations
+```text
+screenshots/title-slide.png
+screenshots/table-of-contents.png
+screenshots/current-state.png
+screenshots/recent-attacks.png
+screenshots/attack-causes.png
+screenshots/impact-of-attacks.png
+screenshots/initiatives.png
+screenshots/conclusion.png
+```
 
 ---
 

@@ -4,12 +4,51 @@
 ![Topic](https://img.shields.io/badge/Topic-Telecom%20Cybersecurity-red)
 ![Type](https://img.shields.io/badge/Type-Presentation-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Format](https://img.shields.io/badge/Format-Preserved%20Original%20Design-lightgrey)
 
 ## Overview
 
 This presentation was prepared for the **Applications of Information and Communications Technology** course. The topic focuses on the **importance of cybersecurity in the telecommunication sector**.
 
 The presentation explains how telecommunication networks support modern communication, why telecom infrastructure is critical, what types of cyberattacks target telecom organizations, and what defensive strategies can be used to protect telecom services, customer data, and national infrastructure.
+
+> This version preserves the original Semester 1 presentation style while improving content clarity, typography, alignment, and wording for portfolio use.
+
+---
+
+## Project Preview
+
+### Title Slide
+
+![Title Slide](screenshots/title-slide.png)
+
+### Outline
+
+![Outline](screenshots/outline.png)
+
+### Telecom Stakeholders
+
+![Telecom Stakeholders](screenshots/telecom-stakeholders.png)
+
+### Why Cybersecurity Matters in Telecom
+
+![Telecom Cybersecurity Importance](screenshots/telecom-cybersecurity-importance.png)
+
+### Cyberattacks in Telecom
+
+![Telecom Attacks](screenshots/telecom-attacks.png)
+
+### Defense Strategies
+
+![Defense Strategies](screenshots/defense-strategies.png)
+
+### Pakistan Perspective
+
+![Pakistan Perspective](screenshots/pakistan-perspective.png)
+
+### Conclusion
+
+![Conclusion](screenshots/conclusion.png)
 
 ---
 
@@ -21,7 +60,9 @@ The presentation explains how telecommunication networks support modern communic
 | Project Topic | Importance of Cybersecurity in Telecommunication |
 | Project Type | Academic Presentation |
 | Focus Area | Telecom Security |
+| Final File | `Telecom_Cybersecurity_ICT.pptx` |
 | Status | Completed |
+| Portfolio Update | Original design preserved with cleanup |
 
 ---
 
@@ -78,21 +119,6 @@ A successful attack on telecom infrastructure can disrupt communication services
 
 ---
 
-## Impact of Cyberattacks
-
-Cyberattacks against telecom systems can cause:
-
-- Service outages
-- Loss of connectivity
-- Emergency communication disruption
-- Customer data exposure
-- Regulatory penalties
-- Financial losses
-- Reputation damage
-- Increased recovery and security costs
-
----
-
 ## Defensive Strategies
 
 The presentation highlights several strategies for defending telecom infrastructure:
@@ -110,27 +136,6 @@ The presentation highlights several strategies for defending telecom infrastruct
 
 ---
 
-## Pakistan and International Perspective
-
-The presentation discusses telecom cybersecurity from both Pakistani and international viewpoints.
-
-Pakistan-related areas include:
-
-- Pakistan Telecommunication Authority
-- Telecom security guidelines
-- National response and cybercrime investigation
-- Public awareness
-- Protection of telecom infrastructure
-
-International areas include:
-
-- International Telecommunication Union
-- United Nations
-- Global cybersecurity cooperation
-- Telecom cybersecurity frameworks
-
----
-
 ## Repository Structure
 
 ```text
@@ -140,24 +145,26 @@ telecom-cybersecurity-presentation/
 ├── PRESENTATION_NOTES.md
 │
 ├── presentation/
-│   └── Presentation-CS-181.pptx
+│   └── Telecom_Cybersecurity_ICT.pptx
 │
 └── screenshots/
+    ├── title-slide.png
+    ├── outline.png
+    ├── telecom-stakeholders.png
+    ├── telecom-cybersecurity-importance.png
+    ├── telecom-attacks.png
+    ├── defense-strategies.png
+    ├── pakistan-perspective.png
+    └── conclusion.png
 ```
 
 ---
 
-## Suggested Screenshots
+## Presentation File
 
-For GitHub preview, add screenshots of:
-
-- Title slide
-- Outline slide
-- Cybersecurity in telecom sector slide
-- Cyberattacks in telecom slide
-- Role of cybersecurity slide
-- Pakistan perspective slide
-- Conclusion slide
+```text
+presentation/Telecom_Cybersecurity_ICT.pptx
+```
 
 ---
 

@@ -4,12 +4,51 @@
 ![Topic](https://img.shields.io/badge/Topic-Cybersecurity%20in%20Pakistan-red)
 ![Type](https://img.shields.io/badge/Type-Presentation-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Format](https://img.shields.io/badge/Format-Preserved%20Original%20Design-lightgrey)
 
 ## Overview
 
 This presentation was prepared for the **Functional English** course. The topic focuses on **the current state of cybersecurity in Pakistan**.
 
 The presentation discusses Pakistan’s increasing dependence on digital technology, the rise of cybercrime, recent cyber incidents, public awareness challenges, the impact of attacks, and initiatives that can strengthen the national cybersecurity environment.
+
+> This version preserves the original Semester 1 presentation style while improving content clarity, grammar, typography, alignment, and wording for portfolio use.
+
+---
+
+## Project Preview
+
+### Title Slide
+
+![Title Slide](screenshots/title-slide.png)
+
+### Table of Contents
+
+![Table of Contents](screenshots/table-of-contents.png)
+
+### Current State
+
+![Current State](screenshots/current-state.png)
+
+### Recent Attacks
+
+![Recent Attacks](screenshots/recent-attacks.png)
+
+### Causes of Cyberattacks
+
+![Attack Causes](screenshots/attack-causes.png)
+
+### Impact of Attacks
+
+![Impact of Attacks](screenshots/impact-of-attacks.png)
+
+### Initiatives
+
+![Initiatives](screenshots/initiatives.png)
+
+### Conclusion
+
+![Conclusion](screenshots/conclusion.png)
 
 ---
 
@@ -21,7 +60,9 @@ The presentation discusses Pakistan’s increasing dependence on digital technol
 | Project Topic | The Current State of Cybersecurity in Pakistan |
 | Project Type | Academic Presentation |
 | Focus Area | Cybersecurity Awareness and National Cybersecurity |
+| Final File | `Cybersecurity_in_Pakistan_Functional_English.pptx` |
 | Status | Completed |
+| Portfolio Update | Original design preserved with cleanup |
 
 ---
 
@@ -61,8 +102,6 @@ The presentation explains that Pakistan has seen an increase in cyberattacks tar
 
 ## Causes of Cybersecurity Challenges
 
-The presentation identifies several reasons behind cybersecurity problems:
-
 - Low public awareness
 - Weak cyber hygiene
 - Social engineering
@@ -73,23 +112,7 @@ The presentation identifies several reasons behind cybersecurity problems:
 
 ---
 
-## Impact of Cyberattacks
-
-Cyberattacks can cause:
-
-- Financial loss
-- Business disruption
-- Loss of sensitive data
-- Privacy violations
-- Operational downtime
-- National security risks
-- Reputation damage
-
----
-
 ## Suggested Initiatives
-
-The presentation suggests that Pakistan should:
 
 - Develop a national cybersecurity strategy
 - Increase public awareness
@@ -114,24 +137,26 @@ cybersecurity-in-pakistan-presentation/
 ├── PRESENTATION_NOTES.md
 │
 ├── presentation/
-│   └── Presentation-EL-170.pptx
+│   └── Cybersecurity_in_Pakistan_Functional_English.pptx
 │
 └── screenshots/
+    ├── title-slide.png
+    ├── table-of-contents.png
+    ├── current-state.png
+    ├── recent-attacks.png
+    ├── attack-causes.png
+    ├── impact-of-attacks.png
+    ├── initiatives.png
+    └── conclusion.png
 ```
 
 ---
 
-## Suggested Screenshots
+## Presentation File
 
-For GitHub preview, add screenshots of:
-
-- Title slide
-- Table of contents
-- Current state slide
-- Recent attacks slide
-- Impact slide
-- Initiatives slide
-- Conclusion slide
+```text
+presentation/Cybersecurity_in_Pakistan_Functional_English.pptx
+```
 
 ---
 
