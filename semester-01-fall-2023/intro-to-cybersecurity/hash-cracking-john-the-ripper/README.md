@@ -1,73 +1,118 @@
-# Hash Cracking Demonstration using John the Ripper
+# Hash Cracking with John the Ripper
 
-## Course
-
-**Introduction to Cybersecurity**  
-BS Cyber Security  
-Air University Islamabad
-
-## Project Type
-
-Research Presentation and Live Tool Demonstration
+![Course](https://img.shields.io/badge/Course-Introduction%20to%20Cybersecurity-blue)
+![Platform](https://img.shields.io/badge/Platform-Kali%20Linux-lightgrey)
+![Tool](https://img.shields.io/badge/Tool-John%20the%20Ripper-red)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Use](https://img.shields.io/badge/Use-Academic%20Demo-orange)
 
 ## Overview
 
-This project was completed as part of the Introduction to Cybersecurity course. The objective was to research, present, and demonstrate the use of a cybersecurity tool in a controlled academic environment. Our selected topic was **password hash cracking** using **John the Ripper** on Kali Linux.
+This project was completed for the **Introduction to Cybersecurity** course as a research-based presentation and live demonstration of a cybersecurity tool. The selected topic was **password hash cracking**, demonstrated using **John the Ripper** on Kali Linux.
 
-The project explained the concept of password hashing, the role of wordlists in password recovery, and how tools such as John the Ripper and Johnny GUI can be used to test weak password security. A live demonstration was performed using a dummy password hash and a custom wordlist generated for educational purposes.
+The project explains how password hashes work, why weak passwords are vulnerable, how custom wordlists improve password recovery attempts, and how John the Ripper can be used in a controlled lab environment to test password strength.
 
-## Problem Statement
+> **Note:** This project uses dummy hashes and lab-created data only. It is intended strictly for academic and authorized cybersecurity learning.
 
-Passwords are commonly stored as hashes instead of plain text. Although hashing improves password storage security, weak passwords can still be recovered if attackers obtain password hashes and use dictionary, brute-force, or rule-based cracking techniques. This project demonstrates how weak password choices can be exploited and why strong password policies, salting, and secure hashing algorithms are necessary.
+---
+
+## Project Preview
+
+### Presentation Cover
+
+![Presentation Cover](screenshots/ppt-cover.png)
+
+### Table of Contents
+
+![Presentation Table of Contents](screenshots/ppt-ToC.png)
+
+---
+
+## Project Information
+
+| Field | Details |
+|---|---|
+| Course | Introduction to Cybersecurity |
+| Degree | BS Cyber Security |
+| University | Air University Islamabad |
+| Project Type | Research Presentation + Live Demonstration |
+| Topic | Password Hash Cracking |
+| Tool Demonstrated | John the Ripper |
+| Environment | Kali Linux |
+| Status | Completed |
+| Presentation | Improved and polished version included |
+
+---
 
 ## Objectives
 
-- Research the purpose and usage of John the Ripper.
-- Explain how password hashes work.
-- Demonstrate hash cracking using a dummy MD5 hash.
-- Show the role of custom wordlists in password recovery.
-- Present mitigation techniques against password cracking risks.
-- Demonstrate Johnny as a graphical interface for John the Ripper.
+- Research and explain the purpose of John the Ripper.
+- Understand the concept of password hashing.
+- Demonstrate how weak password hashes can be cracked in a lab.
+- Generate a custom wordlist using CUPP.
+- Use John the Ripper to crack a dummy MD5 hash.
+- Show Johnny as a graphical interface for John the Ripper.
+- Discuss mitigation techniques against hash cracking risks.
+
+---
 
 ## Tools and Technologies
 
-- Kali Linux
-- John the Ripper
-- Johnny GUI
-- CUPP wordlist generator
-- MD5 hashing
-- Linux terminal
-- Custom wordlist
+| Tool / Technology | Purpose |
+|---|---|
+| Kali Linux | Cybersecurity testing environment |
+| John the Ripper | Password hash cracking and auditing |
+| Johnny GUI | Graphical interface for John the Ripper |
+| CUPP | Custom wordlist generation |
+| MD5 Hash | Dummy hash format used for demonstration |
+| Linux Terminal | Command-line execution |
 
-## Topics Covered
+---
 
-- Benefits of Kali Linux for cybersecurity learning
-- Overview of John the Ripper
-- Understanding hashed passwords
-- Generating a password hash
-- Creating a custom wordlist
-- Executing John the Ripper
-- Cracking ZIP and PDF password hashes conceptually
-- Using Johnny GUI
-- Mitigation against hash cracking risks
+## Demonstration Workflow
+
+```mermaid
+flowchart LR
+    A[Create Dummy Password] --> B[Generate MD5 Hash]
+    B --> C[Save Hash in Text File]
+    C --> D[Create Custom Wordlist using CUPP]
+    D --> E[Run John the Ripper]
+    E --> F[Recover Dummy Password]
+    F --> G[Discuss Mitigations]
+```
+
+---
 
 ## Methodology
 
-The project followed these steps:
+The project followed a controlled and academic demonstration approach:
 
-1. Selected John the Ripper as the cybersecurity tool for demonstration.
-2. Researched Kali Linux and John the Ripper.
-3. Explained password hashing and why hashes are used.
-4. Generated a dummy MD5 password hash.
-5. Created a custom wordlist using CUPP.
-6. Used John the Ripper to compare wordlist entries against the hash.
-7. Demonstrated the cracked password output.
-8. Explained Johnny GUI as an easier interface for beginners.
-9. Presented mitigation strategies against hash cracking attacks.
+1. Researched Kali Linux and John the Ripper.
+2. Explained password hashing and hash storage.
+3. Generated a dummy password hash.
+4. Created a small custom wordlist using CUPP.
+5. Executed John the Ripper against the dummy hash.
+6. Demonstrated password recovery in a lab environment.
+7. Introduced Johnny GUI for easier tool usage.
+8. Discussed defensive measures against hash cracking.
 
-## Demonstration Summary
+---
 
-The live demonstration used a controlled lab setup. A dummy password was converted into an MD5 hash and stored in a text file. A small custom wordlist was generated using CUPP. John the Ripper was then executed with the selected wordlist, hash format, and hash file. The tool matched the correct password from the wordlist and displayed the cracked password.
+## Demo Screenshots
+
+### CUPP Wordlist Generation
+
+![CUPP Wordlist Generation](screenshots/Cupp.png)
+
+### John the Ripper Execution
+
+![John the Ripper Execution](screenshots/JohnTheRipper.png)
+
+### Johnny GUI
+
+![Johnny GUI](screenshots/Johnny-JtR-GUI.png)
+
+---
 
 ## Example Command Structure
 
@@ -75,35 +120,41 @@ The live demonstration used a controlled lab setup. A dummy password was convert
 john --wordlist=<wordlist-file> --format=<hash-format> <hash-file>
 ```
 
-Example:
+Example used for educational demonstration:
 
 ```bash
 john --wordlist=jazib.txt --format=Raw-MD5 password1.txt
 ```
 
-> Note: Commands are shown for academic understanding only and should only be used in authorized lab environments.
+> The command above is shown for academic understanding only. Use such tools only in authorized lab environments.
 
-## Security Lessons Learned
+---
 
-- Weak passwords are vulnerable to dictionary and wordlist-based attacks.
-- Hashing alone is not enough if passwords are weak.
+## Key Learning Outcomes
+
+- Passwords are usually stored as hashes instead of plain text.
+- Weak passwords can still be recovered if attackers obtain password hashes.
+- Wordlists make password cracking faster when passwords are predictable.
 - MD5 is outdated and should not be used for secure password storage.
-- Salting makes precomputed attacks more difficult.
-- Strong password policies reduce cracking success.
-- Multi-factor authentication adds an additional layer of protection.
-- Secure password storage should use modern password hashing algorithms such as bcrypt, scrypt, Argon2, or PBKDF2.
+- Password security depends on strong password policies, salting, adaptive hashing, and multi-factor authentication.
+- Hash cracking tools are useful for authorized password auditing and defensive security testing.
 
-## Mitigation Techniques
+---
 
-- Use long and complex passwords.
-- Avoid personal information in passwords.
-- Use salted hashes.
-- Avoid outdated hashing algorithms such as MD5 and SHA-1.
-- Use adaptive password hashing algorithms.
-- Enforce account lockout or rate limiting.
-- Use multi-factor authentication.
-- Monitor for leaked password hashes.
-- Educate users about password security.
+## Mitigation Against Hash Cracking
+
+| Risk | Mitigation |
+|---|---|
+| Weak passwords | Use long and unique passphrases |
+| Predictable passwords | Avoid names, dates, phone numbers, and common words |
+| Fast hash algorithms | Avoid MD5 and SHA-1 for password storage |
+| Precomputed attacks | Use unique salts for every password |
+| Offline cracking | Use adaptive hashing algorithms such as bcrypt, scrypt, Argon2, or PBKDF2 |
+| Credential compromise | Enable multi-factor authentication |
+| Repeated login attempts | Apply rate limiting and account lockout |
+| User negligence | Provide password security awareness |
+
+---
 
 ## Repository Structure
 
@@ -112,15 +163,38 @@ hash-cracking-john-the-ripper/
 │
 ├── README.md
 ├── DEMO_NOTES.md
+│
 ├── presentation/
 │   └── Hash-Cracking_CYS_ppt.pptx
+│
 └── screenshots/
+    ├── Cupp.png
+    ├── Johnny-JtR-GUI.png
+    ├── JohnTheRipper.png
+    ├── ppt-cover.png
+    └── ppt-ToC.png
 ```
+
+---
+
+## Presentation
+
+The improved and polished project presentation is available in the `presentation/` folder:
+
+```text
+presentation/Hash-Cracking_CYS_ppt.pptx
+```
+
+The presentation includes improved formatting, clearer wording, a completed mitigation section, and a stronger academic/defensive conclusion.
+
+---
 
 ## Ethical Notice
 
-This project is intended strictly for academic learning, ethical research, and authorized cybersecurity lab demonstrations. It must not be used to crack passwords, access accounts, or test systems without explicit permission.
+This project is intended strictly for academic learning, ethical research, and authorized cybersecurity demonstrations. It must not be used to crack real passwords, access accounts, test third-party systems, or attack any organization without explicit written permission.
+
+---
 
 ## Disclaimer
 
-The demonstration was performed using dummy data in a controlled educational environment. No real user credentials, systems, or accounts were targeted.
+The demonstration was performed using dummy data in a controlled educational environment. No real accounts, real users, leaked hashes, or unauthorized systems were targeted.
