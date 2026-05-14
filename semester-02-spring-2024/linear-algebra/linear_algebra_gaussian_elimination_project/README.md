@@ -20,6 +20,22 @@ The enhanced version improves the original coursework implementation with cleane
 
 ---
 
+## Project Preview
+
+### Unique Solution
+
+![Unique Solution](screenshots/unique-solution.png)
+
+### Infinite Solutions
+
+![Infinite Solutions](screenshots/infinite-solutions.png)
+
+### No Solution
+
+![No Solution](screenshots/no-solution.png)
+
+---
+
 ## Project Information
 
 | Field | Details |
@@ -30,6 +46,7 @@ The enhanced version improves the original coursework implementation with cleane
 | Application Type | Console Application |
 | Method | Gaussian Elimination with Partial Pivoting |
 | Status | Completed and Enhanced |
+| Main Output | Unique solution, infinite solutions, or no solution |
 
 ---
 
@@ -97,7 +114,7 @@ flowchart TD
 ## Repository Structure
 
 ```text
-gaussian-elimination-solver-cpp/
+linear_algebra_gaussian_elimination_project/
 │
 ├── README.md
 ├── PROJECT_NOTES.md
@@ -106,21 +123,49 @@ gaussian-elimination-solver-cpp/
 │   └── gaussian_elimination_solver.cpp
 │
 ├── original/
-│   ├── 232095_Project.cpp
-│   └── linear_project.cpp
+│   ├── general_gaussian_elimination_solver.cpp
+│   └── fixed_6x6_consistency_checker.cpp
 │
 ├── sample-data/
 │   ├── unique-solution-input.txt
 │   ├── infinite-solutions-input.txt
 │   └── no-solution-input.txt
 │
-├── output/
-│   ├── unique-solution-output.txt
-│   ├── infinite-solutions-output.txt
-│   └── no-solution-output.txt
-│
 └── screenshots/
+    ├── unique-solution.png
+    ├── infinite-solutions.png
+    └── no-solution.png
 ```
+
+---
+
+## Original Files
+
+The `original/` folder preserves the original coursework files.
+
+| File | Purpose |
+|---|---|
+| `general_gaussian_elimination_solver.cpp` | Original general Gaussian Elimination solver for an `n x n` system |
+| `fixed_6x6_consistency_checker.cpp` | Instructor-specific 6x6 consistency checker with fixed system size |
+
+The fixed `6 x 6` version was intentionally hardcoded because the instructor specifically required checking the consistency of a 6-equation system. The enhanced version generalizes the same idea and supports any `n x n` system, including `6 x 6`.
+
+---
+
+## Enhanced Implementation
+
+The enhanced implementation is located in:
+
+```text
+src/gaussian_elimination_solver.cpp
+```
+
+It combines the main ideas from both original files:
+
+- General Gaussian Elimination from the first original file
+- Consistency checking from the fixed 6x6 requirement
+- Improved rank and inconsistency detection
+- Cleaner output and structure
 
 ---
 
@@ -130,11 +175,13 @@ gaussian-elimination-solver-cpp/
 g++ src/gaussian_elimination_solver.cpp -o gaussian_solver
 ```
 
-On Windows PowerShell, this creates:
+On Windows, this creates:
 
 ```text
 gaussian_solver.exe
 ```
+
+> Do not commit the generated `.exe` file to GitHub.
 
 ---
 
@@ -196,33 +243,13 @@ x3 = -1
 
 ---
 
-## Screenshots
+## Sample Cases Included
 
-Add screenshots using these names:
-
-```text
-screenshots/
-├── unique-solution.png
-├── infinite-solutions.png
-└── no-solution.png
-```
-
----
-
-## Original Files
-
-The `original/` folder contains the original coursework source files:
-
-```text
-original/232095_Project.cpp
-original/linear_project.cpp
-```
-
-The enhanced implementation is kept separately in:
-
-```text
-src/gaussian_elimination_solver.cpp
-```
+| Case | Input File | Screenshot |
+|---|---|---|
+| Unique solution | `sample-data/unique-solution-input.txt` | `screenshots/unique-solution.png` |
+| Infinite solutions | `sample-data/infinite-solutions-input.txt` | `screenshots/infinite-solutions.png` |
+| No solution | `sample-data/no-solution-input.txt` | `screenshots/no-solution.png` |
 
 ---
 
@@ -252,7 +279,7 @@ Through this project, I learned how to:
 
 ## Future Enhancements
 
-- Add file input/output support
+- Add file input/output support inside the program
 - Add Gauss-Jordan elimination
 - Show parametric solutions for infinite-solution systems
 - Add determinant calculation
