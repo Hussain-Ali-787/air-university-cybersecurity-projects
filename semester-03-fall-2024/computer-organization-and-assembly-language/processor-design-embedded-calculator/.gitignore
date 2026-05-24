@@ -1,0 +1,41 @@
+# Visual Studio / MASM generated files
+.vs/
+Debug/
+Release/
+x64/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.lastbuildstate
+*.log
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+*.ipch
+
+# Office temporary files
+~$*
+*.tmp
+*.bak
+*.backup
+
+# Generated/export files
+exports/*
+!exports/.gitkeep
+
+# Optional screenshots placeholder
+screenshots/*
+!screenshots/.gitkeep
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Archives
+*.zip
+*.rar
+*.7z

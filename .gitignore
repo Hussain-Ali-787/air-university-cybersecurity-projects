@@ -121,3 +121,72 @@ rockyou.txt
 private/
 confidential/
 raw-data/
+
+# Local secrets and runtime files
+.env
+*.db
+*.sqlite3
+
+# Captures / archives / binaries
+*.pcap
+*.pcapng
+*.cap
+*.zip
+*.rar
+*.7z
+*.exe
+*.dll
+
+# IDE / build / cache
+.vs/
+bin/
+obj/
+__pycache__/
+*.pyc
+
+# Secrets and runtime databases
+.env
+*.db
+*.sqlite3
+
+# Archives
+*.zip
+*.rar
+*.7z
+
+# Packet captures / sensitive traffic
+*.pcap
+*.pcapng
+*.cap
+*.hccapx
+*.hc22000
+
+# Visual Studio / build / cache
+.vs/
+bin/
+obj/
+Debug/
+Release/
+x64/
+*.ipch
+*.pdb
+*.ilk
+*.tlog
+*.lastbuildstate
+*.suo
+*.user
+*.VC.db
+*.VC.opendb
+*.vsidx
+
+# Compiled binaries
+*.exe
+*.dll
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+Thumbs.db
+.DS_Store

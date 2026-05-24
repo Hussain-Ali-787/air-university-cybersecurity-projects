@@ -1,0 +1,25 @@
+# Office temporary files
+~$*
+*.tmp
+*.bak
+*.backup
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Archives
+*.zip
+*.rar
+*.7z
+
+# Do not commit wireless captures or sensitive traffic artifacts
+*.cap
+*.pcap
+*.pcapng
+*.hccapx
+*.hc22000
+*.csv
+*.netxml
+*.kismet
+*.log

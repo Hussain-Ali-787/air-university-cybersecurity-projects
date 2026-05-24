@@ -1,0 +1,21 @@
+# Packet Tracer autosaves / backups
+*.pka
+*.bak
+*.backup
+*.tmp
+
+# Office temporary files
+~$*
+
+# Optional screenshot placeholder
+screenshots/*
+!screenshots/.gitkeep
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Archives
+*.zip
+*.rar
+*.7z

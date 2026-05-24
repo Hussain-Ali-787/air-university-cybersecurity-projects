@@ -1,0 +1,64 @@
+# Proteus workspace and user-specific files
+*.workspace
+*.Workspace
+*.pdsprj.*.workspace
+*.PDSPRJ.*.workspace
+
+# Proteus backup folders
+Project Backups/
+Project Backups/**
+**/Project Backups/
+**/Project Backups/**
+
+# Proteus backup/autosave files
+*.pdsbak
+*.PDSBAK
+*.bak
+*.backup
+*[Autosaved].pdsprj
+*[Autosaved].PDSPRJ
+*Autosaved*
+
+# Proteus temporary/cache/log files
+*.cache
+*.tmp
+*.temp
+*.log
+
+# Proteus simulation/debug output
+*.sdf
+*.SDF
+*.cof
+*.COF
+*.elf
+*.ELF
+*.hex
+*.HEX
+*.lst
+*.LST
+*.map
+*.MAP
+*.obj
+*.OBJ
+*.dbg
+*.DBG
+*.vsm
+*.VSM
+*.vsmdebug
+*.VSMDEBUG
+
+# Windows files
+Thumbs.db
+desktop.ini
+
+# Keep actual Proteus project files
+!*.pdsprj
+!*.PDSPRJ
+
+# Keep documentation and evidence files
+!*.md
+!*.xlsx
+!*.png
+!*.jpg
+!*.jpeg
+!*.mp4

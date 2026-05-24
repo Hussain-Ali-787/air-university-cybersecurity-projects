@@ -1,0 +1,14 @@
+# Office temporary files
+~$*
+*.tmp
+*.bak
+*.backup
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Archives
+*.zip
+*.rar
+*.7z

@@ -1,0 +1,23 @@
+# Runtime output
+output/*
+!output/.gitkeep
+
+# Do not track generated build outputs
+.vs/
+x64/
+Debug/
+Release/
+bin/
+obj/
+build/
+*.exe
+*.dll
+*.pdb
+*.obj
+*.lib
+*.exp
+*.ipch
+*.suo
+*.user
+*.log
+*.cache

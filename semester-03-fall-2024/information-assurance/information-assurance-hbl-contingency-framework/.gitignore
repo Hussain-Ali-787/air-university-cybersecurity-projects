@@ -1,0 +1,18 @@
+# Office temporary files
+~$*
+*.tmp
+*.bak
+*.backup
+
+# Export/generated files
+exports/*
+!exports/.gitkeep
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Archive files
+*.zip
+*.rar
+*.7z
