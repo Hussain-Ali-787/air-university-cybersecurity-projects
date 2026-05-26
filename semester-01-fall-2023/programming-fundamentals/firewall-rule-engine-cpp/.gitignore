@@ -1,0 +1,30 @@
+# Compiled binaries
+firewall
+firewall.exe
+*.exe
+*.out
+
+# Object and build files
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+build/
+bin/
+obj/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log

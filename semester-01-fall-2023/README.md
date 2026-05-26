@@ -1,143 +1,146 @@
-# Semester 01 - Fall 2023
+# Semester 1 — Fall 2023
 
-![Semester](https://img.shields.io/badge/Semester-01-blue)
-![Session](https://img.shields.io/badge/Session-Fall%202023-orange)
+![Semester](https://img.shields.io/badge/Semester-1-blue)
+![Term](https://img.shields.io/badge/Term-Fall%202023-purple)
 ![Program](https://img.shields.io/badge/Program-BS%20Cyber%20Security-red)
+![University](https://img.shields.io/badge/University-Air%20University%20Islamabad-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ## Overview
 
-This folder contains academic projects and presentations completed during **Semester 01 - Fall 2023** of the **BS Cyber Security** program at **Air University Islamabad**.
+This folder contains selected coursework and projects completed during **Semester 1 — Fall 2023** of the BS Cyber Security program at **Air University Islamabad**.
 
-The projects in this semester represent the foundation stage of my degree. They include beginner-level programming, cybersecurity awareness, ICT-based website development, discrete mathematics presentations, and communication-focused cybersecurity topics.
+Semester 1 introduced the academic and technical foundations of the degree, including ICT concepts, programming fundamentals, discrete mathematics, English communication, and introductory cybersecurity. The uploaded projects show early-stage academic work, basic technical development, cybersecurity awareness, presentation skills, and the beginning of practical security learning.
 
-> The work in this semester is preserved close to its original first-semester academic style, with documentation, folder structure, and minor cleanup added for GitHub portfolio presentation.
+The projects in this semester are preserved as part of an academic portfolio to show progression from foundational concepts toward more advanced cybersecurity and software development work.
 
----
+## Semester Information
 
-## Courses Included
+| Field | Details |
+|---|---|
+| Semester | Semester 1 |
+| Term | Fall 2023 |
+| Program | BS Cyber Security |
+| University | Air University Islamabad |
+| Focus Areas | ICT, Programming, Discrete Mathematics, English Communication, Introductory Cybersecurity |
+| Repository Status | Organized and documented for portfolio use |
 
-| Course | Folder | Type of Work |
+## Courses Covered
+
+| Course | Repository Folder | Public Project Status |
 |---|---|---|
-| Applications of ICT | `applications-of-ict/` | Website development and cybersecurity presentation |
-| Discrete Structures | `discrete-structures/` | Mathematical relations presentation |
-| Functional English | `functional-english/` | Cybersecurity awareness presentation |
-| Introduction to Cybersecurity | `intro-to-cybersecurity/` | Cybersecurity tool research and demonstration |
-| Programming Fundamentals | `programming-fundamentals/` | C++ programming project |
+| Applications of Information and Communication Technologies | [`applications-of-information-and-communication-technologies/`](./applications-of-information-and-communication-technologies/) | Added |
+| Discrete Structures | [`discrete-structures/`](./discrete-structures/) | Added |
+| Functional English | [`functional-english/`](./functional-english/) | Added |
+| Introduction to Cyber Security | [`introduction-to-cyber-security/`](./introduction-to-cyber-security/) | Added |
+| Islamic Studies and Ethics | `islamic-studies-and-ethics/` | No public project added |
+| Programming Fundamentals | [`programming-fundamentals/`](./programming-fundamentals/) | Added |
 
----
+## Project Index
 
-## Projects
+| Course | Project | Type | Description |
+|---|---|---|---|
+| Applications of ICT | [Telecom Cybersecurity Presentation](./applications-of-information-and-communication-technologies/telecom-cybersecurity-presentation/) | Presentation | Explains the importance of cybersecurity in the telecommunication sector and its role in protecting critical communication infrastructure. |
+| Applications of ICT Lab | [CrowdStrike Website Development](./applications-of-information-and-communication-technologies/crowdstrike-website-development/) | Website Development | Wix-based academic website project inspired by CrowdStrike and its Falcon cybersecurity platform. |
+| Discrete Structures | [Relations and Their Properties](./discrete-structures/relations-and-their-properties/) | Presentation | Explains mathematical relations, relation properties, database applications, matrix representation, and digraph representation. |
+| Functional English | [Cybersecurity in Pakistan Presentation](./functional-english/cybersecurity-in-pakistan-presentation/) | Presentation | Discusses cybersecurity challenges, cyber incidents, awareness gaps, impacts, and improvement initiatives in Pakistan. |
+| Introduction to Cyber Security | [Hash Cracking with John the Ripper](./introduction-to-cyber-security/hash-cracking-john-the-ripper/) | Lab + Presentation | Demonstrates basic password hash cracking concepts using John the Ripper in an authorized academic lab setting. |
+| Programming Fundamentals | [Firewall Rule Engine in C++](./programming-fundamentals/firewall-rule-engine-cpp/) | Coding Project | Simulates a basic firewall rule engine that applies ordered allow/deny rules to packet-like input data. |
 
-### Applications of ICT
+## Highlighted Projects
 
-| Project | Description |
-|---|---|
-| `crowdstrike-website-development/` | A Wix-based academic website project inspired by CrowdStrike’s cybersecurity brand and Falcon product |
-| `telecom-cybersecurity-presentation/` | Presentation on the importance of cybersecurity in the telecommunication sector |
+### Firewall Rule Engine in C++
 
-### Discrete Structures
+The **Firewall Rule Engine in C++** is one of the strongest Semester 1 projects because it combines programming fundamentals with a cybersecurity-inspired problem. It demonstrates file handling, modular C++ code, rule parsing, default-deny behavior, and basic packet-filtering logic.
 
-| Project | Description |
-|---|---|
-| `relations-and-their-properties/` | Group presentation on mathematical relations, relation properties, database relations, matrices, and digraphs |
+**Key skills demonstrated:**
 
-### Functional English
+- C++ programming
+- File handling
+- Modular code structure
+- Rule-based decision making
+- Basic firewall logic
+- Input validation
+- Cybersecurity-themed software development
 
-| Project | Description |
-|---|---|
-| `cybersecurity-in-pakistan-presentation/` | Presentation on the current state of cybersecurity in Pakistan, cyber risks, impacts, and recommended initiatives |
+### Hash Cracking with John the Ripper
 
-### Introduction to Cybersecurity
+The **Hash Cracking with John the Ripper** project is the main practical cybersecurity project from Semester 1. It introduces password security, hashing, wordlists, Linux-based tools, and defensive lessons around password strength and secure authentication.
 
-| Project | Description |
-|---|---|
-| `hash-cracking-john-the-ripper/` | Research presentation and live demonstration of hash cracking using John the Ripper in a controlled lab environment |
+**Key skills demonstrated:**
 
-### Programming Fundamentals
+- Linux tool usage
+- Password security concepts
+- Hash cracking in an authorized lab
+- Cybersecurity ethics
+- Tool demonstration
+- Security awareness and mitigation
 
-| Project | Description |
-|---|---|
-| `firewall-rule-engine-cpp/` | Enhanced C++ firewall rule engine that reads rules and simulated packets from text files and applies allow/deny decisions |
+## Skills Demonstrated in Semester 1
 
----
+- Basic C++ programming
+- File handling and structured input/output
+- ICT and digital communication concepts
+- Website development using Wix
+- Presentation design and public speaking
+- Cybersecurity awareness
+- Introductory password security
+- Basic Linux-based security tooling
+- Discrete mathematics foundations
+- Relations, matrices, and directed graphs
+- Technical documentation using GitHub README files
 
-## Folder Structure
+## Repository Structure
 
-```text
+```txt
 semester-01-fall-2023/
-│
 ├── README.md
 │
-├── applications-of-ict/
-│   ├── crowdstrike-website-development/
-│   └── telecom-cybersecurity-presentation/
+├── applications-of-information-and-communication-technologies/
+│   ├── README.md
+│   ├── telecom-cybersecurity-presentation/
+│   └── crowdstrike-website-development/
 │
 ├── discrete-structures/
+│   ├── README.md
 │   └── relations-and-their-properties/
 │
 ├── functional-english/
+│   ├── README.md
 │   └── cybersecurity-in-pakistan-presentation/
 │
-├── intro-to-cybersecurity/
+├── introduction-to-cyber-security/
+│   ├── README.md
 │   └── hash-cracking-john-the-ripper/
 │
 └── programming-fundamentals/
+    ├── README.md
     └── firewall-rule-engine-cpp/
 ```
 
----
+## Project Status Summary
 
-## Key Skills Practiced
+| Project | Status | Portfolio Role |
+|---|---|---|
+| Firewall Rule Engine in C++ | Enhanced for Portfolio | Supporting coding project |
+| Hash Cracking with John the Ripper | Updated for Portfolio | Supporting cybersecurity project |
+| CrowdStrike Website Development | Completed | Early web/ICT project |
+| Telecom Cybersecurity Presentation | Completed | Academic archive |
+| Relations and Their Properties | Completed | Academic archive |
+| Cybersecurity in Pakistan Presentation | Completed | Communication and awareness project |
 
-- Basic C++ programming
-- File handling and string parsing
-- Rule-based logic implementation
-- Basic cybersecurity concepts
-- Password hashing and hash cracking concepts
-- Cybersecurity awareness and presentation
-- ICT-based website development
-- Wix website design
-- Discrete mathematics concepts
-- Relations, matrices, and digraphs
-- Academic communication and teamwork
-- GitHub documentation and portfolio organization
+## Academic and Portfolio Notes
 
----
+Semester 1 projects are early academic projects. They are intentionally preserved to show the beginning of my cybersecurity learning journey, including foundational programming, communication, ICT, mathematics, and security awareness.
 
-## Highlighted Work
+Some projects were improved for GitHub presentation by updating README files, organizing folders, correcting filenames, improving documentation, and removing unnecessary duplicate notes. The original academic nature of the work has been preserved.
 
-| Project | Why It Matters |
-|---|---|
-| Firewall Rule Engine in C++ | Connects Programming Fundamentals with cybersecurity-style rule processing |
-| Hash Cracking with John the Ripper | Introduces practical cybersecurity tooling in a controlled lab setting |
-| CrowdStrike Website Development | Shows ICT, web design, and cybersecurity-themed communication |
-| Relations and Their Properties | Builds mathematical foundations used in computing and databases |
-| Telecom Cybersecurity Presentation | Connects cybersecurity with critical infrastructure and telecom systems |
-| Cybersecurity in Pakistan Presentation | Builds awareness of national cybersecurity challenges and policy needs |
+## Safety and Ethics
 
----
+All cybersecurity-related material in this semester is for academic, defensive, and authorized learning only.
 
-## Academic Growth Note
+The hash cracking project uses lab-based examples and is documented to explain password security concepts, not to support unauthorized access. The firewall project is a simplified simulation and does not inspect, capture, modify, or block real network traffic.
 
-This semester reflects the beginning of my cybersecurity degree journey. Some projects are intentionally simple because they were completed during the first semester. They are included to show learning progression from foundational academic work toward more advanced cybersecurity projects in later semesters.
+## Academic Notice
 
----
-
-## Ethical Notice
-
-All cybersecurity-related work in this folder is intended strictly for:
-
-- Academic learning
-- Ethical research
-- Authorized lab demonstrations
-- Cybersecurity awareness
-- Defensive security understanding
-
-No project in this semester should be used for unauthorized access, credential attacks, real-world exploitation, or testing against systems without permission.
-
----
-
-## Disclaimer
-
-The projects in this folder were completed as part of university coursework. Some presentations and materials are preserved close to their original academic style to reflect the first-semester learning stage. Minor improvements may have been made for clarity, formatting, documentation, and GitHub presentation.
+This folder is part of an academic cybersecurity portfolio. The projects were completed for coursework and later organized for professional documentation on GitHub.
