@@ -7,10 +7,6 @@
 # Office temporary files
 ~$*
 
-# Optional screenshot placeholder
-screenshots/*
-!screenshots/.gitkeep
-
 # OS files
 Thumbs.db
 .DS_Store

@@ -1,5 +1,15 @@
 # Project Title
 
+## Course Information
+
+| Field | Details |
+|---|---|
+| Course | Course name |
+| Course Code | Course code, if available |
+| Semester | Semester and session |
+| University | Air University Islamabad |
+| Student / Team | Name(s) |
+
 ## Overview
 
 Briefly explain what this project is, what course it belongs to, and what it demonstrates.
@@ -42,14 +52,17 @@ Example:
 
 ```text
 project-name/
-│
-├── README.md
-├── src/
-├── docs/
-├── screenshots/
-├── reports/
-├── presentation/
-└── requirements.txt / package.json
+  README.md
+  src/
+  docs/
+  screenshots/
+  presentation/
+  data/
+  configs/
+  results/
+  references/
+  RUN_GUIDE.md
+  PROJECT_NOTES.md
 ```
 
 ## Setup Instructions
@@ -63,6 +76,13 @@ project-name/
 ```bash
 # Add usage commands here
 ```
+
+## How to Review
+
+1. Start with `README.md`.
+2. Review the main report or documentation in `docs/`.
+3. Check screenshots or outputs in `screenshots/`.
+4. Follow `RUN_GUIDE.md` if the project can be run.
 
 ## Screenshots
 
@@ -81,6 +101,12 @@ Summarize the final output, findings, or learning outcomes.
 
 - Enhancement 1
 - Enhancement 2
+
+## Safety and Privacy
+
+- No real secrets, credentials, or private keys are included.
+- No private user data is included.
+- Any cybersecurity material is lab-based, sanitized, and for authorized learning only.
 
 ## Ethical Notice
 

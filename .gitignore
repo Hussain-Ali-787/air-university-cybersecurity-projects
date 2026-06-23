@@ -1,21 +1,19 @@
-# =========================
-# General OS Files
-# =========================
+# Operating system files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# =========================
-# IDE / Editor Files
-# =========================
+# Editors and IDEs
 .vscode/
 .idea/
+.vs/
 *.swp
 *.swo
+*.suo
+*.user
+*.vsidx
 
-# =========================
 # Python
-# =========================
 __pycache__/
 *.py[cod]
 *.pyo
@@ -31,14 +29,10 @@ pip-wheel-metadata/
 .coverage
 htmlcov/
 
-# =========================
-# Jupyter Notebook
-# =========================
+# Jupyter
 .ipynb_checkpoints/
 
-# =========================
 # Node.js / JavaScript
-# =========================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -48,9 +42,7 @@ dist/
 build/
 out/
 
-# =========================
-# Java / C / C++ Build Files
-# =========================
+# Java / C / C++ / .NET build output
 *.class
 *.jar
 *.war
@@ -60,12 +52,20 @@ out/
 *.dll
 *.so
 *.dylib
+*.pdb
+*.ilk
+*.ipch
+*.tlog
+*.lastbuildstate
+*.VC.db
+*.VC.opendb
 bin/
 obj/
+Debug/
+Release/
+x64/
 
-# =========================
-# Environment / Secrets
-# =========================
+# Environment files and secrets
 .env
 .env.*
 !.env.example
@@ -78,34 +78,27 @@ secrets/
 credentials/
 config.local.*
 
-# =========================
-# Logs
-# =========================
+# Logs and runtime databases
 *.log
 logs/
-
-# =========================
-# Databases
-# =========================
 *.db
 *.sqlite
 *.sqlite3
+instance/
 
-# =========================
-# Archives / Large Files
-# =========================
+# Archives and large packaged artifacts
 *.zip
 *.rar
 *.7z
 *.tar
 *.gz
 
-# =========================
-# Cybersecurity Sensitive Files
-# =========================
+# Cybersecurity-sensitive files
 *.pcap
 *.pcapng
 *.cap
+*.hccapx
+*.hc22000
 *.dump
 *.dmp
 *.evtx
@@ -116,78 +109,7 @@ payloads/
 wordlists/
 rockyou.txt
 
-# =========================
-# Documents That May Contain Private Data
-# =========================
+# Private or raw data folders
 private/
 confidential/
 raw-data/
-
-# Local secrets and runtime files
-.env
-*.db
-*.sqlite3
-
-# Captures / archives / binaries
-*.pcap
-*.pcapng
-*.cap
-*.zip
-*.rar
-*.7z
-*.exe
-*.dll
-
-# IDE / build / cache
-.vs/
-bin/
-obj/
-__pycache__/
-*.pyc
-
-# Secrets and runtime databases
-.env
-*.db
-*.sqlite3
-
-# Archives
-*.zip
-*.rar
-*.7z
-
-# Packet captures / sensitive traffic
-*.pcap
-*.pcapng
-*.cap
-*.hccapx
-*.hc22000
-
-# Visual Studio / build / cache
-.vs/
-bin/
-obj/
-Debug/
-Release/
-x64/
-*.ipch
-*.pdb
-*.ilk
-*.tlog
-*.lastbuildstate
-*.suo
-*.user
-*.VC.db
-*.VC.opendb
-*.vsidx
-
-# Compiled binaries
-*.exe
-*.dll
-
-# Python cache
-__pycache__/
-*.pyc
-
-# OS files
-Thumbs.db
-.DS_Store

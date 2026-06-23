@@ -1,10 +1,8 @@
 # Air University Cybersecurity Academic Projects
 
-A structured academic portfolio containing course-wise projects, labs, assignments, reports, and presentations completed during my BS Cyber Security degree at Air University Islamabad.
+A structured academic portfolio containing semester-wise projects, labs, assignments, reports, presentations, and selected code completed during my BS Cyber Security degree at Air University Islamabad.
 
-This repository is organized to preserve my university work in a clean, professional, and accessible format. Past projects may be enhanced over time with improved documentation, cleaner code, screenshots, setup instructions, and updated explanations.
-
----
+This repository is being reorganized around a consistent project standard so every project is easier to review, safer to publish, and clearer as part of a professional portfolio.
 
 ## Degree Information
 
@@ -16,233 +14,109 @@ This repository is organized to preserve my university work in a clean, professi
 | Registration ID | 232095 |
 | Session | Fall 2023 onwards |
 
----
-
 ## Repository Purpose
 
-The purpose of this repository is to:
+- Organize academic cybersecurity projects semester-wise and course-wise.
+- Preserve original coursework artifacts while improving public documentation.
+- Showcase practical work in programming, networking, security, forensics, systems, AI, and privacy.
+- Maintain an ethical and safe cybersecurity portfolio.
+- Track remaining cleanup work transparently.
 
-- Organize academic cybersecurity projects semester-wise and course-wise
-- Improve and document past university projects
-- Build a professional cybersecurity portfolio
-- Showcase practical work in programming, security, forensics, networking, AI, and privacy
-- Maintain ethical and educational cybersecurity work in one place
+## Organization Standards
 
----
+Repository cleanup and future project additions should follow these files:
+
+- [Project Organization Standards](PROJECT_STANDARDS.md)
+- [Project README Template](PROJECT_README_TEMPLATE.md)
+- [Project Migration Tracker](PROJECT_MIGRATION_TRACKER.md)
+- [Safe Upload Checklist](SAFE_UPLOAD_CHECKLIST.md)
+
+Projects are aligned one at a time so original coursework artifacts remain traceable while the public portfolio becomes cleaner and easier to review.
 
 ## Repository Structure
 
-Projects are organized using the following structure:
-
 ```text
-semester → course → project / lab / assignment / report
+air-university-cybersecurity-projects/
+  semester-01-fall-2023/
+    course-name/
+      project-name/
+  semester-02-spring-2024/
+    course-name/
+      project-name/
+  semester-03-fall-2024/
+    course-name/
+      project-name/
+  semester-04-spring-2025/
+    course-name/
+      project-name/
+  semester-05-summer-2025/
+    internship/
+  semester-06-fall-2025/
+    course-name/
+  semester-07-spring-2026/
+  final-year-project/
+    project-name/
 ```
 
-Example:
-
-```text
-semester-04-spring-2025/
-└── network-security/
-    ├── README.md
-    ├── labs/
-    ├── assignments/
-    ├── projects/
-    ├── reports/
-    └── screenshots/
-```
-
----
+Standard project folders are documented in [PROJECT_STANDARDS.md](PROJECT_STANDARDS.md). Not every project needs every folder; each project keeps only useful artifacts.
 
 ## Semesters Covered
 
-| Semester | Session | Main Focus Areas |
+| Semester | Session | Main Focus Areas | Status |
+|---|---|---|---|
+| Semester 1 | Fall 2023 | ICT, programming fundamentals, discrete structures, cybersecurity basics | Added |
+| Semester 2 | Spring 2024 | OOP, software engineering, digital logic design, linear algebra | Added |
+| Semester 3 | Fall 2024 | Computer networks, data structures, assembly language, information assurance | Added |
+| Semester 4 | Spring 2025 | Malware analysis, network security, operating systems, secure software development | Added |
+| Semester 5 | Summer 2025 | Internship | Placeholder / partial |
+| Semester 6 | Fall 2025 | AI, digital forensics, ethical hacking, parallel computing | Placeholder |
+| Semester 7 | Spring 2026 | Future coursework | Placeholder |
+| Final Year Project | In progress | Privacy engineering and product development | Placeholder / partial |
+
+## Project Index
+
+| Semester | Course | Project |
 |---|---|---|
-| Semester 1 | Fall 2023 | ICT, programming fundamentals, discrete structures, cybersecurity basics |
-| Semester 2 | Spring 2024 | Object-oriented programming, software engineering, digital logic design, linear algebra |
-| Semester 3 | Fall 2024 | Computer networks, data structures, assembly language, information assurance |
-| Semester 4 | Spring 2025 | Malware analysis, network security, operating systems, secure software development |
-| Semester 5 | Summer 2025 | Internship |
-| Semester 6 | Fall 2025 | Artificial intelligence, digital forensics, ethical hacking, parallel computing |
+| Semester 1 | Applications of ICT | [CrowdStrike Website Development](semester-01-fall-2023/applications-of-information-and-communication-technologies/crowdstrike-website-development/) |
+| Semester 1 | Applications of ICT | [Telecom Cybersecurity Presentation](semester-01-fall-2023/applications-of-information-and-communication-technologies/telecom-cybersecurity-presentation/) |
+| Semester 1 | Discrete Structures | [Relations and Their Properties](semester-01-fall-2023/discrete-structures/relations-and-their-properties/) |
+| Semester 1 | Functional English | [Cybersecurity in Pakistan Presentation](semester-01-fall-2023/functional-english/cybersecurity-in-pakistan-presentation/) |
+| Semester 1 | Introduction to Cyber Security | [Hash Cracking with John the Ripper](semester-01-fall-2023/introduction-to-cyber-security/hash-cracking-john-the-ripper/) |
+| Semester 1 | Programming Fundamentals | [Firewall Rule Engine in C++](semester-01-fall-2023/programming-fundamentals/firewall-rule-engine-cpp/) |
+| Semester 2 | Digital Logic Design | [4-Way Traffic Signal Controller](semester-02-spring-2024/digital-logic-design/4-way-traffic-signal-controller/) |
+| Semester 2 | Introduction to Software Engineering | [Software Testing with Selenium](semester-02-spring-2024/introduction-to-software-engineering/software-testing-with-selenium/) |
+| Semester 2 | Linear Algebra | [Gaussian Elimination Solver](semester-02-spring-2024/linear-algebra/gaussian-elimination-solver/) |
+| Semester 2 | Object-Oriented Programming | [Firewall Tutor in C#](semester-02-spring-2024/object-oriented-programming/firewall-tutor-csharp/) |
+| Semester 3 | Computer Networks | [Multi-Site Aviation Campus Network Simulation](semester-03-fall-2024/computer-networks/avionics-base-network/) |
+| Semester 3 | Computer Organization and Assembly Language | [Processor Design Embedded Calculator](semester-03-fall-2024/computer-organization-and-assembly-language/processor-design-embedded-calculator/) |
+| Semester 3 | Data Structures | [Competition Scheduler](semester-03-fall-2024/data-structures/competition-scheduler-cpp/) |
+| Semester 3 | Information Assurance | [HBL Contingency Framework](semester-03-fall-2024/information-assurance/hbl-contingency-framework/) |
+| Semester 3 | Introduction to Management | [Business Intelligence Management: Apple](semester-03-fall-2024/introduction-to-management/business-intelligence-management-apple/) |
+| Semester 4 | Malware Analysis | [NetSupport RAT Analysis](semester-04-spring-2025/malware-analysis/malware-analysis-netsupport-rat/) |
+| Semester 4 | Multivariable Calculus | [Vector Derivatives Presentation](semester-04-spring-2025/multivariable-calculus/multivariable-calculus-vector-derivatives/) |
+| Semester 4 | Network Security | [Wi-Fi Deauthentication Analysis](semester-04-spring-2025/network-security/network-security-wifi-deauthentication-analysis/) |
+| Semester 4 | Operating Systems | [Round-Robin Kernel Scheduler Experiment](semester-04-spring-2025/operating-systems/operating-system-round-robin-kernel-scheduler/) |
+| Semester 4 | Secure Software Design and Development | [Secure Student Management System](semester-04-spring-2025/secure-software-design-and-development/secure-student-management-system/) |
+| Final Year Project | Privacy / FYP | [S.P.O.T. Smart Privacy Oversharing Tracker](final-year-project/spot-smart-privacy-oversharing-tracker/) |
 
----
-
-## Course-Wise Structure
-
-```text
-air-university-cybersecurity-projects/
-│
-├── semester-01-fall-2023/
-│   ├── applications-of-ict/
-│   ├── discrete-structures/
-│   ├── functional-english/
-│   ├── introduction-to-cybersecurity/
-│   └── programming-fundamentals/
-│
-├── semester-02-spring-2024/
-│   ├── applied-physics/
-│   ├── digital-logic-design/
-│   ├── introduction-to-software-engineering/
-│   ├── linear-algebra/
-│   └── object-oriented-programming/
-│
-├── semester-03-fall-2024/
-│   ├── calculus-and-analytical-geometry/
-│   ├── computer-networks/
-│   ├── computer-organization-and-assembly-language/
-│   ├── data-structures/
-│   ├── information-assurance/
-│   └── introduction-to-management/
-│
-├── semester-04-spring-2025/
-│   ├── malware-analysis/
-│   ├── multivariable-calculus/
-│   ├── network-security/
-│   ├── operating-systems/
-│   └── secure-software-design-and-development/
-│
-├── semester-05-summer-2025/
-│   └── internship/
-│
-├── semester-06-fall-2025/
-│   ├── artificial-intelligence/
-│   ├── civics-and-community-engagement/
-│   ├── digital-forensics/
-│   ├── ethical-hacking-and-defense/
-│   ├── expository-writing/
-│   └── parallel-and-distributed-computing/
-│
-└── final-year-project/
-    └── spot-smart-privacy-oversharing-tracker/
-```
-
----
-
-## Key Academic Areas
-
-This repository includes work related to:
-
-- Programming Fundamentals
-- Object-Oriented Programming
-- Data Structures
-- Computer Networks
-- Network Security
-- Digital Forensics
-- Malware Analysis
-- Ethical Hacking and Defense
-- Secure Software Design and Development
-- Artificial Intelligence
-- Information Assurance
-- Database and System Security
-- Privacy Engineering
-- Final Year Project Development
-
----
-
-## Highlighted Projects
-
-> This section will be updated as projects are added and improved.
-
-| Project | Course / Area | Status |
-|---|---|---|
-| S.P.O.T: Smart Privacy Oversharing Tracker | Final Year Project | In Progress |
-| AI-Based SOC Agent | Cybersecurity / AI / SOC Automation | In Progress |
-| Digital Forensics Case Work | Digital Forensics | To Be Added |
-| Network Security Labs | Network Security | To Be Added |
-| Ethical Hacking Labs | Ethical Hacking and Defense | To Be Added |
-| Malware Analysis Reports | Malware Analysis | To Be Added |
-
----
-
-## Standard Project Folder Format
-
-Each project or lab will generally follow this format:
+## Common Project Layout
 
 ```text
 project-name/
-│
-├── README.md
-├── src/
-├── docs/
-├── screenshots/
-├── reports/
-├── presentation/
-├── requirements.txt / package.json
-└── .gitignore
+  README.md
+  PROJECT_NOTES.md
+  RUN_GUIDE.md
+  src/
+  docs/
+  presentation/
+  screenshots/
+  data/
+  configs/
+  results/
+  references/
 ```
 
-Some projects may have a different structure depending on the course requirements and tools used.
-
----
-
-## Project Documentation Format
-
-Each project README should include:
-
-```markdown
-# Project Name
-
-## Overview
-Brief explanation of the project.
-
-## Problem Statement
-What problem the project solves or demonstrates.
-
-## Objectives
-- Objective 1
-- Objective 2
-- Objective 3
-
-## Tools and Technologies
-- Tool 1
-- Tool 2
-- Tool 3
-
-## Methodology
-How the project was implemented.
-
-## Results
-What was achieved.
-
-## Screenshots
-Relevant screenshots or outputs.
-
-## Limitations
-Known limitations of the project.
-
-## Future Enhancements
-Possible improvements.
-
-## Ethical Notice
-Academic and authorized use only.
-```
-
----
-
-## Tools and Technologies
-
-Across different courses and projects, this repository may include work using:
-
-- Python
-- C / C++
-- Java
-- JavaScript
-- Node.js
-- Flask
-- SQLite
-- MySQL
-- Wireshark
-- Nmap
-- Burp Suite
-- Cisco Packet Tracer
-- Linux
-- Windows
-- Git and GitHub
-- Jupyter Notebook
-- Machine Learning / AI tools
-- Digital forensics tools
-- Malware analysis tools
-
----
+Some project types use extra descriptive folders such as `packet-tracer/`, `topology/`, `benchmarks/`, `scheduler-source/`, `rules/`, `iocs/`, `media/`, `proteus/`, or `diagrams/`.
 
 ## Cybersecurity Ethics Notice
 
@@ -256,33 +130,24 @@ All cybersecurity-related projects in this repository are intended strictly for:
 
 These projects must not be used against real systems, networks, applications, users, or organizations without explicit written permission.
 
----
-
 ## Sensitive Content Policy
 
-This repository will not intentionally include:
+This repository should not intentionally include:
 
-- Real credentials
-- API keys
-- Private keys
+- Real credentials or API keys
+- Private keys or tokens
 - Personal user data
-- University portal screenshots containing sensitive information
+- Private university portal screenshots
 - Other students' private information
 - Live malware binaries
 - Unauthorized exploit code against real targets
-- Confidential reports or restricted documents
+- Sensitive packet captures, forensic images, or memory dumps
 
-Where needed, data will be sanitized before being uploaded.
+Where needed, data should be sanitized before upload.
 
----
+## Cleanup Status
 
-## Disclaimer
-
-This repository is maintained as an academic portfolio. Some older projects may be incomplete, experimental, or improved over time. The content reflects learning, coursework, research, and practical cybersecurity development during the BS Cyber Security program.
-
-The owner of this repository is not responsible for misuse of any material. All content is provided for educational and ethical purposes only.
-
----
+The repository is actively being standardized. See [PROJECT_MIGRATION_TRACKER.md](PROJECT_MIGRATION_TRACKER.md) for the current migration state and remaining review work.
 
 ## Author
 
