@@ -44,11 +44,19 @@ public sealed class FirewallRule
 
     private static bool MatchesPort(string ruleValue, int packetPort)
     {
-        if (int.TryParse(ruleValue, out int singlePort)) return packetPort == singlePort;
+        if (int.TryParse(ruleValue, out int singlePort))
+        {
+            return IsValidPort(singlePort) && packetPort == singlePort;
+        }
 
         string[] range = ruleValue.Split('-', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
         if (range.Length == 2 && int.TryParse(range[0], out int start) && int.TryParse(range[1], out int end))
         {
+            if (!IsValidPort(start) || !IsValidPort(end) || start > end)
+            {
+                return false;
+            }
+
             return packetPort >= start && packetPort <= end;
         }
 
@@ -87,7 +95,7 @@ public sealed class FirewallRule
         byte[] startBytes = startAddress.GetAddressBytes();
 
         if (packetBytes.Length != 4 || startBytes.Length != 4) return false;
-        if (endLastOctet < 0 || endLastOctet > 255) return false;
+        if (endLastOctet < 0 || endLastOctet > 255 || startBytes[3] > endLastOctet) return false;
 
         return packetBytes[0] == startBytes[0]
                && packetBytes[1] == startBytes[1]
@@ -120,6 +128,11 @@ public sealed class FirewallRule
     private static uint ToUInt32(byte[] bytes)
     {
         return ((uint)bytes[0] << 24) | ((uint)bytes[1] << 16) | ((uint)bytes[2] << 8) | bytes[3];
+    }
+
+    private static bool IsValidPort(int value)
+    {
+        return value is >= 1 and <= 65535;
     }
 
     public override string ToString()

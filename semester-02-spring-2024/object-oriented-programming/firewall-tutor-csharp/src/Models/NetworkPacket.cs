@@ -31,7 +31,11 @@ public sealed class NetworkPacket
         CreatedAt = DateTime.Now;
     }
 
-    public static bool IsValidIp(string value) => IPAddress.TryParse(value, out _);
+    public static bool IsValidIp(string value)
+    {
+        return IPAddress.TryParse(value, out IPAddress? address)
+               && address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork;
+    }
 
     public static bool IsValidPort(int value) => value is >= 1 and <= 65535;
 

@@ -72,7 +72,7 @@ The main objectives of this project were to:
 | Abstraction | Firewall logic is handled through service classes instead of UI code |
 | Enumerations | `RuleAction` and `RuleField` define fixed rule options |
 | Separation of Concerns | UI, models, and services are separated into different folders |
-| File Handling | CSV data is loaded and processed by storage logic |
+| File Handling | CSV data is saved/exported by storage logic |
 
 ---
 
@@ -118,47 +118,40 @@ If a UDP packet matches Rule 1 first, it may be allowed before Rule 2 is checked
 
 ```text
 firewall-tutor-csharp/
-│
-├── README.md
-├── PROJECT_NOTES.md
-├── .gitignore
-│
-├── data/
-│   ├── packets.csv
-│   └── rules.csv
-│
-├── docs/
-│   └── firewall-tutor-csharp.docx
-│
-├── output/
-│   └── results.csv
-│
-├── screenshots/
-│   ├── about-screen.png
-│   ├── home-screen.png
-│   ├── logs-screen.png
-│   ├── packets-screen.png
-│   ├── rules-screen.png
-│   ├── settings-screen.png
-│   ├── simulation-screen.png
-│   └── tutorial-screen.png
-│
-└── src/
-    ├── FirewallTutor.csproj
-    ├── Program.cs
-    ├── Forms/
-    │   └── MainForm.cs
-    ├── Models/
-    │   ├── EvaluationResult.cs
-    │   ├── FirewallRule.cs
-    │   ├── NetworkPacket.cs
-    │   ├── RuleAction.cs
-    │   └── RuleField.cs
-    ├── Services/
-    │   ├── CsvStorage.cs
-    │   └── FirewallEngine.cs
-    └── output/
-        └── results.csv
+  README.md
+  RUN_GUIDE.md
+  PROJECT_NOTES.md
+  .gitignore
+  data/
+    packets.csv
+    rules.csv
+  docs/
+    firewall-tutor-csharp.docx
+  output/
+    results.csv
+  screenshots/
+    about-screen.png
+    home-screen.png
+    logs-screen.png
+    packets-screen.png
+    rules-screen.png
+    settings-screen.png
+    simulation-screen.png
+    tutorial-screen.png
+  src/
+    FirewallTutor.csproj
+    Program.cs
+    Forms/
+      MainForm.cs
+    Models/
+      EvaluationResult.cs
+      FirewallRule.cs
+      NetworkPacket.cs
+      RuleAction.cs
+      RuleField.cs
+    Services/
+      CsvStorage.cs
+      FirewallEngine.cs
 ```
 
 ---

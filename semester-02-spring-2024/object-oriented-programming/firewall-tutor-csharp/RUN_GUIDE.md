@@ -5,7 +5,23 @@ This project is a C# WinForms educational firewall simulator.
 ## Requirements
 
 - Windows
-- .NET SDK compatible with the project file
+- .NET 8 SDK or newer SDK that can build `net8.0-windows`
+
+Check SDK availability:
+
+```powershell
+dotnet --list-sdks
+```
+
+If this command prints no SDK versions, install the .NET SDK before building. The .NET runtime alone is not enough for `dotnet build` or `dotnet run`.
+
+## Build
+
+From this project folder:
+
+```powershell
+dotnet build src/FirewallTutor.csproj
+```
 
 ## Run
 
