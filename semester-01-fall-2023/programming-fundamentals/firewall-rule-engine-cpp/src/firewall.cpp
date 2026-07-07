@@ -74,7 +74,15 @@ bool Firewall::parseIPv4(const std::string& ipText, IPv4Address& ip) {
             }
         }
 
-        int value = std::stoi(part);
+        int value = 0;
+        for (char c : part) {
+            value = (value * 10) + (c - '0');
+            if (value > 255) {
+                ip.valid = false;
+                return false;
+            }
+        }
+
         if (value < 0 || value > 255) {
             ip.valid = false;
             return false;
@@ -190,8 +198,8 @@ bool Firewall::matchIpRange(const std::string& ruleRange, const std::string& pac
         return matchExactIp(ruleRange, packetIp);
     }
 
-    std::string startIpText = ruleRange.substr(0, dashPosition);
-    std::string endText = ruleRange.substr(dashPosition + 1);
+    std::string startIpText = trim(ruleRange.substr(0, dashPosition));
+    std::string endText = trim(ruleRange.substr(dashPosition + 1));
 
     IPv4Address startIp;
     IPv4Address packetAddress;
@@ -200,15 +208,20 @@ bool Firewall::matchIpRange(const std::string& ruleRange, const std::string& pac
         return false;
     }
 
-    int endLastOctet = -1;
+    if (endText.empty()) {
+        return false;
+    }
 
+    int endLastOctet = 0;
     for (char c : endText) {
         if (!std::isdigit(static_cast<unsigned char>(c))) {
             return false;
         }
+        endLastOctet = (endLastOctet * 10) + (c - '0');
+        if (endLastOctet > 255) {
+            return false;
+        }
     }
-
-    endLastOctet = std::stoi(endText);
 
     if (endLastOctet < 0 || endLastOctet > 255) {
         return false;
@@ -220,6 +233,10 @@ bool Firewall::matchIpRange(const std::string& ruleRange, const std::string& pac
         if (packetAddress.octets[i] != startIp.octets[i]) {
             return false;
         }
+    }
+
+    if (startIp.octets[3] > endLastOctet) {
+        return false;
     }
 
     return packetAddress.octets[3] >= startIp.octets[3] &&

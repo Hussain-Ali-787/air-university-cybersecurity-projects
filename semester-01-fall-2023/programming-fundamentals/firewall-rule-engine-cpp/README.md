@@ -144,21 +144,23 @@ Example:
 
 ```txt
 firewall-rule-engine-cpp/
-├── README.md
-├── .gitignore
-├── src/
-│   ├── main.cpp
-│   ├── firewall.cpp
-│   └── firewall.h
-├── data/
-│   ├── rules.txt
-│   └── packets.txt
-├── output/
-│   └── result.txt
-└── screenshots/
-    ├── expected-output.png
-    ├── sample-data.png
-    └── sample-result.png
+  README.md
+  RUN_GUIDE.md
+  PROJECT_NOTES.md
+  .gitignore
+  src/
+    main.cpp
+    firewall.cpp
+    firewall.h
+  data/
+    rules.txt
+    packets.txt
+  output/
+    result.txt
+  screenshots/
+    expected-output.png
+    sample-data.png
+    sample-result.png
 ```
 
 ## How to Compile

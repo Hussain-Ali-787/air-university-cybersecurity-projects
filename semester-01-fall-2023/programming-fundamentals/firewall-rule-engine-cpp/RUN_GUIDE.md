@@ -12,7 +12,7 @@ This project is a small C++ firewall rule engine simulation.
 From this project folder:
 
 ```powershell
-g++ src/main.cpp src/firewall.cpp -o firewall
+g++ src/main.cpp src/firewall.cpp -std=c++17 -Wall -Wextra -pedantic -o firewall
 ```
 
 ## Run with Default Files
