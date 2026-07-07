@@ -96,25 +96,24 @@ The DRP focuses on restoring critical IT systems after a disaster using cloud fa
 ## Repository Structure
 
 ```text
-information-assurance-hbl-contingency-framework/
-├── docs/
-│   └── IA_Report.docx
-├── presentation/
-│   └── IA_Presentation.pptx
-├── exports/
-│   └── .gitkeep
-├── README.md
-├── PROJECT_NOTES.md
-└── .gitignore
+hbl-contingency-framework/
+|-- docs/
+|   `-- hbl-contingency-framework-report.docx
+|-- presentation/
+|   `-- hbl-contingency-framework-presentation.pptx
+|-- .gitignore
+|-- PROJECT_NOTES.md
+|-- RUN_GUIDE.md
+`-- README.md
 ```
 
 ## Deliverables
 
 | Deliverable | Description |
 |---|---|
-| Report | Detailed written project report covering compliance, risk, contingency, IRP, BCP, and DRP |
-| Presentation | Slide deck summarizing the framework and key findings |
-| Project Notes | Short explanation of project scope, limitations, and future improvements |
+| `docs/hbl-contingency-framework-report.docx` | Detailed written project report covering compliance, risk, contingency, IRP, BCP, and DRP |
+| `presentation/hbl-contingency-framework-presentation.pptx` | Slide deck summarizing the framework and key findings |
+| `PROJECT_NOTES.md` | Short explanation of project scope, limitations, and future improvements |
 
 ## Recommendations
 
@@ -130,4 +129,4 @@ The project recommends:
 
 ## Academic Note
 
-This is an academic project prepared for learning and demonstration purposes. It does not claim to represent HBL’s actual internal security architecture, confidential processes, or non-public compliance status.
+This is an academic project prepared for learning and demonstration purposes. It does not claim to represent HBL's actual internal security architecture, confidential processes, or non-public compliance status.

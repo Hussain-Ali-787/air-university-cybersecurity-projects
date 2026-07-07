@@ -62,6 +62,15 @@ The framework uses a layered structure:
 
 This project is based on academic research and publicly understandable banking-sector requirements. It does not use confidential or internal HBL documents. Some assumptions were made for educational purposes, especially around RTO, RPO, backup strategies, and audit findings.
 
+## Technical Review - 2026-07-07
+
+- Reviewed README, run guide, project notes, report artifact, and presentation artifact.
+- Confirmed this is a document/presentation project with no runnable code or automated tests.
+- Corrected README repository structure and deliverable paths to match the actual tracked files.
+- Scanned Office artifact text for obvious leaked credentials. No concrete password or secret value was found.
+- Confirmed references to confidentiality/internal controls are framed as academic scope disclaimers or general contingency-planning content.
+- Kept the project positioned as academic work based on public-sector assumptions, not HBL internal architecture or non-public compliance status.
+
 ## Future Improvements
 
 - Add visual risk heat map
