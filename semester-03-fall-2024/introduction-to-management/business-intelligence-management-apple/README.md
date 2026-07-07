@@ -12,7 +12,7 @@
 
 ## Project Overview
 
-This project analyzes **Apple Inc.** through the lens of management theory, business process analysis, and business intelligence. It studies Apple’s organizational overview, key business processes, emerging technologies, BI-style dashboard visuals, management concepts, and strategic recommendations.
+This project analyzes **Apple Inc.** through the lens of management theory, business process analysis, and business intelligence. It studies Apple's organizational overview, key business processes, emerging technologies, BI-style dashboard visuals, management concepts, and strategic recommendations.
 
 The repository preserves the original academic report and presentation while adding a clean GitHub structure and supporting screenshots for easier review.
 
@@ -48,7 +48,7 @@ Apple was selected because it is a strong example of:
 |---|---|
 | Product Development | Covers ideation, prototyping, testing, launch, and innovation-driven product cycles |
 | Supply Chain Management | Covers supplier sourcing, manufacturing coordination, logistics, and distribution |
-| Marketing and Branding | Covers Apple’s premium brand positioning, simplicity, innovation, and customer loyalty |
+| Marketing and Branding | Covers Apple's premium brand positioning, simplicity, innovation, and customer loyalty |
 | Customer Experience | Covers customer interaction, support resolution, service quality, and feedback analysis |
 
 ## Business Intelligence and Technology Concepts
@@ -71,32 +71,33 @@ The project applies:
 
 - SWOT analysis
 - PESTEL analysis
-- Porter’s Five Forces
+- Porter's Five Forces
 - Strategic planning
 - Leadership and decision-making
 - Agile and Scrum
 - Risk management
 - Lean management
-- Maslow’s Hierarchy of Needs
+- Maslow's Hierarchy of Needs
 
 ## Repository Structure
 
 ```text
-introduction-to-management/
-├── docs/
-│   └── ManagementReport.pdf
-├── presentation/
-│   └── Introduction_to_Management_Project.pptx
-├── screenshots/
-│   ├── bi-dashboard-visual-1.PNG
-│   ├── bi-dashboard-visual-2.PNG
-│   ├── business-process-model-1.PNG
-│   ├── business-process-model-2.PNG
-│   ├── conclusion.PNG
-│   └── ppt-title-slide.PNG
-├── .gitignore
-├── PROJECT_NOTES.md
-└── README.md
+business-intelligence-management-apple/
+|-- docs/
+|   `-- ManagementReport.pdf
+|-- presentation/
+|   `-- Introduction_to_Management_Project.pptx
+|-- screenshots/
+|   |-- bi-dashboard-visual-1.PNG
+|   |-- bi-dashboard-visual-2.PNG
+|   |-- business-process-model-1.PNG
+|   |-- business-process-model-2.PNG
+|   |-- conclusion.PNG
+|   `-- ppt-title-slide.PNG
+|-- .gitignore
+|-- PROJECT_NOTES.md
+|-- RUN_GUIDE.md
+`-- README.md
 ```
 
 ## Important Files

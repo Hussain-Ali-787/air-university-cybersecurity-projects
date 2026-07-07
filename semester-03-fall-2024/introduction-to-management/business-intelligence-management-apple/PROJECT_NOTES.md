@@ -6,7 +6,7 @@ Introduction to Management Project: Business Intelligence and Management Integra
 
 ## Purpose
 
-The purpose of this project is to analyze Apple Inc.’s key business processes and explain how business intelligence tools, emerging technologies, and management theories can improve organizational efficiency and decision-making.
+The purpose of this project is to analyze Apple Inc.'s key business processes and explain how business intelligence tools, emerging technologies, and management theories can improve organizational efficiency and decision-making.
 
 ## Repository Status
 
@@ -15,21 +15,22 @@ The repository keeps the original academic report and presentation. The README, 
 ## Final Directory Structure
 
 ```text
-introduction-to-management/
-├── docs/
-│   └── ManagementReport.pdf
-├── presentation/
-│   └── Introduction_to_Management_Project.pptx
-├── screenshots/
-│   ├── bi-dashboard-visual-1.PNG
-│   ├── bi-dashboard-visual-2.PNG
-│   ├── business-process-model-1.PNG
-│   ├── business-process-model-2.PNG
-│   ├── conclusion.PNG
-│   └── ppt-title-slide.PNG
-├── .gitignore
-├── PROJECT_NOTES.md
-└── README.md
+business-intelligence-management-apple/
+|-- docs/
+|   `-- ManagementReport.pdf
+|-- presentation/
+|   `-- Introduction_to_Management_Project.pptx
+|-- screenshots/
+|   |-- bi-dashboard-visual-1.PNG
+|   |-- bi-dashboard-visual-2.PNG
+|   |-- business-process-model-1.PNG
+|   |-- business-process-model-2.PNG
+|   |-- conclusion.PNG
+|   `-- ppt-title-slide.PNG
+|-- .gitignore
+|-- PROJECT_NOTES.md
+|-- RUN_GUIDE.md
+`-- README.md
 ```
 
 ## Selected Organization
@@ -40,19 +41,19 @@ Apple Inc. was selected because it is a strong example of innovation, product de
 
 ### Product Development
 
-Apple’s product development process focuses on innovation, user-centered design, prototyping, testing, and premium product launches.
+Apple's product development process focuses on innovation, user-centered design, prototyping, testing, and premium product launches.
 
 ### Supply Chain Management
 
-Apple’s supply chain relies on supplier coordination, manufacturing planning, logistics, and retail or online distribution. The project identifies supplier dependency and global disruptions as key challenges.
+Apple's supply chain relies on supplier coordination, manufacturing planning, logistics, and retail or online distribution. The project identifies supplier dependency and global disruptions as key challenges.
 
 ### Marketing and Branding
 
-Apple’s marketing focuses on simplicity, innovation, premium positioning, and emotional brand loyalty.
+Apple's marketing focuses on simplicity, innovation, premium positioning, and emotional brand loyalty.
 
 ### Customer Experience
 
-Apple’s customer experience includes retail experience, online support, customer service, and feedback analysis.
+Apple's customer experience includes retail experience, online support, customer service, and feedback analysis.
 
 ## BI and Technology Concepts
 
@@ -73,13 +74,13 @@ The project applies:
 
 - SWOT analysis
 - PESTEL analysis
-- Porter’s Five Forces
+- Porter's Five Forces
 - Strategic planning
 - Leadership and decision-making
 - Agile and Scrum
 - Risk management
 - Lean management
-- Maslow’s Hierarchy of Needs
+- Maslow's Hierarchy of Needs
 
 ## Screenshot Purpose
 
@@ -101,6 +102,15 @@ The original files are preserved for authenticity, but they may still contain mi
 - Some presentation slides are text-heavy.
 - Some slide content appears repeated or crowded.
 - References could be expanded in a future revision.
+
+## Technical Review - 2026-07-07
+
+- Reviewed README, run guide, project notes, PDF report, PowerPoint deck, and screenshot previews.
+- Confirmed this is a report/presentation project with no runnable code or automated tests.
+- Corrected repository structure blocks to match the actual tracked files.
+- Normalized public markdown punctuation and tree formatting for clean GitHub rendering.
+- Scanned PDF and PowerPoint text for obvious private-data terms. No password, secret, confidential, proprietary, or internal company data was found.
+- Kept the project positioned as academic analysis based on public business knowledge, not an Apple-affiliated or confidential BI implementation.
 
 ## Future Improvements
 
