@@ -177,8 +177,12 @@ configure terminal
 
 no ip domain-lookup
 service password-encryption
+ip domain-name aoh.local
 
 enable secret <LAB_SECRET>
+username netadmin privilege 15 secret <LAB_SECRET>
+crypto key generate rsa modulus 1024
+ip ssh version 2
 
 banner motd #
 Unauthorized access is prohibited. This device is part of an academic Packet Tracer simulation.
@@ -190,8 +194,7 @@ line console 0
  logging synchronous
 
 line vty 0 4
- password <LAB_SECRET>
- login
+ login local
  transport input ssh
 end
 write memory

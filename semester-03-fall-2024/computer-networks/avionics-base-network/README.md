@@ -91,29 +91,29 @@ The Packet Tracer file keeps the original VLAN labels as configured in the acade
 
 ```text
 avionics-base-network/
-├── configs/
-│   └── avionics-base-network-configs.md
-├── docs/
-│   └── avionics-base-network-report.docx
-├── packet-tracer/
-│   └── avionics-base-network-simulation.pkt
-├── presentation/
-│   └── avionics-base-network-presentation.pptx
-├── screenshots/
-│   ├── Screenshot 2026-05-27 054237.png
-│   ├── Screenshot 2026-05-27 054444.png
-│   ├── Screenshot 2026-05-27 054454.png
-│   ├── Screenshot 2026-05-27 055111.png
-│   ├── Screenshot 2026-05-27 055234.png
-│   ├── Screenshot 2026-05-27 055309.png
-│   ├── Screenshot 2026-05-27 055351.png
-│   └── verification-commands.md
-├── topology/
-│   ├── logical-diagram.pdf
-│   ├── logical-diagram.png
-│   └── logical-diagram-old.png
-├── .gitignore
-└── README.md
+|-- configs/
+|   `-- avionics-base-network-configs.md
+|-- docs/
+|   `-- avionics-base-network-report.docx
+|-- packet-tracer/
+|   `-- avionics-base-network-simulation.pkt
+|-- presentation/
+|   `-- avionics-base-network-presentation.pptx
+|-- screenshots/
+|   |-- Screenshot 2026-05-27 054237.png
+|   |-- Screenshot 2026-05-27 054444.png
+|   |-- Screenshot 2026-05-27 054454.png
+|   |-- Screenshot 2026-05-27 055111.png
+|   |-- Screenshot 2026-05-27 055234.png
+|   |-- Screenshot 2026-05-27 055309.png
+|   |-- Screenshot 2026-05-27 055351.png
+|   `-- verification-commands.md
+|-- topology/
+|   `-- logical-diagram.png
+|-- .gitignore
+|-- PROJECT_NOTES.md
+|-- RUN_GUIDE.md
+`-- README.md
 ```
 
 ## Main Files
@@ -122,7 +122,6 @@ avionics-base-network/
 |---|---|
 | `packet-tracer/avionics-base-network-simulation.pkt` | Main Cisco Packet Tracer simulation file |
 | `topology/logical-diagram.png` | Main topology image for GitHub preview |
-| `topology/logical-diagram.pdf` | Topology diagram in PDF format |
 | `screenshots/` | DNS, Web, FTP, Mail, Syslog, and service verification screenshots |
 | `screenshots/verification-commands.md` | CLI-based routing, OSPF, VLAN, trunk, and ping verification evidence |
 | `configs/avionics-base-network-configs.md` | Clean configuration, addressing, and verification documentation |
@@ -300,12 +299,11 @@ The final Packet Tracer simulation was verified for:
 If Cisco Packet Tracer is not available, review the project through:
 
 1. `topology/logical-diagram.png`
-2. `topology/logical-diagram.pdf`
-3. `screenshots/`
-4. `screenshots/verification-commands.md`
-5. `configs/avionics-base-network-configs.md`
-6. `docs/avionics-base-network-report.docx`
-7. `presentation/avionics-base-network-presentation.pptx`
+2. `screenshots/`
+3. `screenshots/verification-commands.md`
+4. `configs/avionics-base-network-configs.md`
+5. `docs/avionics-base-network-report.docx`
+6. `presentation/avionics-base-network-presentation.pptx`
 
 These files provide enough evidence to understand the topology, VLAN plan, routing design, service configuration, and testing results.
 
@@ -324,7 +322,7 @@ These files provide enough evidence to understand the topology, VLAN plan, routi
 - Public documentation avoids presenting the topology as a real aviation or defense infrastructure.
 - Credentials should be represented as `<LAB_SECRET>` in public files.
 - Test emails, FTP files, and screenshots should not contain real sensitive data.
-- The DOCX and PPTX are kept as original academic submission artifacts and may preserve older classroom wording.
+- The DOCX and PPTX are kept as original academic submission artifacts and may preserve older classroom wording. The public GitHub markdown is the normalized fictional, portfolio-safe version.
 
 ## Future Improvements
 
