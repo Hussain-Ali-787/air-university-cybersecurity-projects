@@ -12,7 +12,7 @@ This project is a C++ Gaussian elimination solver.
 From this project folder:
 
 ```powershell
-g++ src/gaussian_elimination_solver.cpp -o gaussian-elimination-solver
+g++ src/gaussian_elimination_solver.cpp -std=c++17 -Wall -Wextra -pedantic -o gaussian-elimination-solver
 ```
 
 ## Run

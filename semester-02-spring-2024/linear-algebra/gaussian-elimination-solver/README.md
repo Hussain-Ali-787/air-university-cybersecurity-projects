@@ -111,26 +111,23 @@ flowchart TD
 
 ```text
 gaussian-elimination-solver/
-│
-├── README.md
-├── .gitignore
-│
-├── src/
-│   └── gaussian_elimination_solver.cpp
-│
-├── original/
-│   ├── general_gaussian_elimination_solver.cpp
-│   └── fixed_6x6_consistency_checker.cpp
-│
-├── sample-data/
-│   ├── unique-solution-input.txt
-│   ├── infinite-solutions-input.txt
-│   └── no-solution-input.txt
-│
-└── screenshots/
-    ├── unique-solution.png
-    ├── infinite-solutions.png
-    └── no-solution.png
+  README.md
+  RUN_GUIDE.md
+  PROJECT_NOTES.md
+  .gitignore
+  src/
+    gaussian_elimination_solver.cpp
+  original/
+    general_gaussian_elimination_solver.cpp
+    fixed_6x6_consistency_checker.cpp
+  sample-data/
+    unique-solution-input.txt
+    infinite-solutions-input.txt
+    no-solution-input.txt
+  screenshots/
+    unique-solution.png
+    infinite-solutions.png
+    no-solution.png
 ```
 
 ---
@@ -152,7 +149,7 @@ The `original/` folder contains earlier coursework versions that are preserved f
 ### Compile with g++
 
 ```bash
-g++ src/gaussian_elimination_solver.cpp -o gaussian_solver
+g++ src/gaussian_elimination_solver.cpp -std=c++17 -Wall -Wextra -pedantic -o gaussian_solver
 ```
 
 ### Run on Windows PowerShell

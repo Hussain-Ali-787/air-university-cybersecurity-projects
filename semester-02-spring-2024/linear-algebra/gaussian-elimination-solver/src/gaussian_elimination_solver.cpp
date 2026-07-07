@@ -145,10 +145,16 @@ vector<vector<double>> inputSystem() {
     int n;
 
     cout << "Enter the number of unknowns: ";
-    cin >> n;
+    if (!(cin >> n)) {
+        throw invalid_argument("Number of unknowns must be a valid integer.");
+    }
 
     if (n <= 0) {
         throw invalid_argument("Number of unknowns must be greater than zero.");
+    }
+
+    if (n > 50) {
+        throw invalid_argument("Number of unknowns is too large for this educational solver.");
     }
 
     vector<vector<double>> augmented(n, vector<double>(n + 1));
@@ -158,14 +164,18 @@ vector<vector<double>> inputSystem() {
         cout << "Equation " << i + 1 << " coefficients:\n";
         for (int j = 0; j < n; j++) {
             cout << "A[" << i + 1 << "][" << j + 1 << "] = ";
-            cin >> augmented[i][j];
+            if (!(cin >> augmented[i][j]) || !isfinite(augmented[i][j])) {
+                throw invalid_argument("Matrix coefficients must be valid finite numbers.");
+            }
         }
     }
 
     cout << "\nEnter the constants vector b:\n";
     for (int i = 0; i < n; i++) {
         cout << "b[" << i + 1 << "] = ";
-        cin >> augmented[i][n];
+        if (!(cin >> augmented[i][n]) || !isfinite(augmented[i][n])) {
+            throw invalid_argument("Constants vector values must be valid finite numbers.");
+        }
     }
 
     return augmented;
