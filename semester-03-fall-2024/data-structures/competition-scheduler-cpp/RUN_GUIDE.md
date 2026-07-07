@@ -2,6 +2,11 @@
 
 This project includes an original C++/CLI coursework version and a reformed hybrid version with a C++ backend DLL and C# WinForms frontend.
 
+## Requirements
+
+- MinGW-w64 `g++` for the backend DLL.
+- .NET 8 SDK with Windows Forms workload support for the frontend.
+
 ## Reformed Version
 
 ### Build Backend
@@ -19,6 +24,8 @@ From `reformed/frontend-csharp-winforms/`:
 ```powershell
 dotnet run
 ```
+
+The frontend project copies `CompetitionSchedulerBackend.dll` from `reformed/backend-cpp-dll/build/` when the DLL exists, so build the backend first.
 
 ## Sample Data
 

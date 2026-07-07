@@ -28,7 +28,7 @@ public sealed class MainForm : Form
 
     public MainForm()
     {
-        _r_rootDir = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", ".."));
+        _rootDir = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", ".."));
         _sharedDataDir = Path.Combine(_rootDir, "shared-data");
         _outputDir = Path.Combine(_rootDir, "output");
         _logoDir = Path.Combine(_rootDir, "reformed", "frontend-csharp-winforms", "Resources", "Team Logos");
@@ -316,7 +316,7 @@ public sealed class MainForm : Form
 
         Label workflow = new()
         {
-            Text = "Load Teams → Generate Schedule → Simulate Matches → Export Report",
+            Text = "Load Teams -> Generate Schedule -> Simulate Matches -> Export Report",
             Dock = DockStyle.Bottom,
             Height = 36,
             ForeColor = Theme.Accent,
@@ -402,7 +402,7 @@ public sealed class MainForm : Form
 
         if (_teamsTable == null || _teamsTable.Rows.Count == 0)
         {
-            body.Controls.Add(EmptyState("No teams loaded yet", "Click “Load Teams” to import the default 16-team file."));
+            body.Controls.Add(EmptyState("No teams loaded yet", "Click \"Load Teams\" to import the default 16-team file."));
             return;
         }
 
@@ -535,7 +535,7 @@ public sealed class MainForm : Form
 
         if (_matchesTable == null || _matchesTable.Rows.Count == 0)
         {
-            body.Controls.Add(EmptyState("No schedule generated yet", "Load teams first, then click “Generate Schedule”."));
+            body.Controls.Add(EmptyState("No schedule generated yet", "Load teams first, then click \"Generate Schedule\"."));
             return;
         }
 
@@ -611,7 +611,7 @@ public sealed class MainForm : Form
 
         if (_matchesTable == null || _matchesTable.Rows.Count == 0)
         {
-            body.Controls.Add(EmptyState("Generate Schedule first", "Open View Schedule, load teams if needed, then click “Generate Schedule”."));
+            body.Controls.Add(EmptyState("Generate Schedule first", "Open View Schedule, load teams if needed, then click \"Generate Schedule\"."));
             return;
         }
 
@@ -821,19 +821,19 @@ public sealed class MainForm : Form
         layout.RowStyles.Add(new RowStyle(SizeType.Percent, 40));
 
         layout.Controls.Add(InfoCard("Tournament Rules",
-            "• Exactly 16 teams participate.\n" +
-            "• Teams are ranked before scheduling.\n" +
-            "• Round 1 creates 8 matches.\n" +
-            "• Winners progress to Round 2, Semi-Finals, and Finals.\n" +
-            "• A new round cannot be generated until all current matches are complete.\n" +
-            "• Winners can be selected manually from the schedule or simulated automatically."), 0, 0);
+            "- Exactly 16 teams participate.\n" +
+            "- Teams are ranked before scheduling.\n" +
+            "- Round 1 creates 8 matches.\n" +
+            "- Winners progress to Round 2, Semi-Finals, and Finals.\n" +
+            "- A new round cannot be generated until all current matches are complete.\n" +
+            "- Winners can be selected manually from the schedule or simulated automatically."), 0, 0);
 
         layout.Controls.Add(InfoCard("Data Structures Used",
-            "• vector: stores teams and matches.\n" +
-            "• queue: pairs teams during round generation.\n" +
-            "• sorting: applies rank-based scheduling.\n" +
-            "• classes/structs: represent Team and Match records.\n" +
-            "• BST: documented as a future enhancement."), 0, 1);
+            "- vector: stores teams and matches.\n" +
+            "- queue: pairs teams during round generation.\n" +
+            "- sorting: applies rank-based scheduling.\n" +
+            "- classes/structs: represent Team and Match records.\n" +
+            "- BST: documented as a future enhancement."), 0, 1);
 
         layout.Controls.Add(EventLogCard(), 0, 2);
 

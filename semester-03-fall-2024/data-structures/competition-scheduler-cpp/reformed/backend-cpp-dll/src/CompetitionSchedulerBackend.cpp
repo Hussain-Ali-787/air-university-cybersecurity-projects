@@ -2,6 +2,7 @@
 #include "../include/CompetitionSchedulerBackend.h"
 
 #include <algorithm>
+#include <cctype>
 #include <ctime>
 #include <fstream>
 #include <iomanip>
@@ -30,6 +31,8 @@ static std::string htmlEscape(const std::string& v){ std::string o; for(char c:v
 static std::string roundName(int r){ if(r==1)return"Preliminary Round"; if(r==2)return"Round 2"; if(r==3)return"Semi-Finals"; if(r==4)return"Finals"; return"Round "+std::to_string(r); }
 static std::string statusText(const Match& m){ if(m.completed)return"Completed"; if(m.teamA.id==0||m.teamB.id==0)return"Pending"; return"Ready"; }
 static void logEvent(const std::string& m){ g_logs.push_back({g_nextLogId++,m}); }
+static bool parsePositiveInt(const std::string& text,int& value){ std::string s=trim(text); if(s.empty())return false; if(!std::all_of(s.begin(),s.end(),[](unsigned char ch){return std::isdigit(ch)!=0;}))return false; try{ size_t pos=0; int parsed=std::stoi(s,&pos); if(pos!=s.size()||parsed<=0)return false; value=parsed; return true; }catch(...){ return false; } }
+static bool hasWritablePath(const char* path,const std::string& label){ if(!path||std::string(path).empty()){ setError(label+" path is empty."); return false; } return true; }
 static std::string dateForMatch(int offset){ std::time_t now=std::time(nullptr); std::tm lt{}; 
 #ifdef _WIN32
 localtime_s(&lt,&now);
@@ -68,9 +71,9 @@ static bool completeMatch(int id,const Team& winner){
     return true;
 }
 
-static bool writeTeams(const char* path){ std::ofstream f(path); if(!f){setError("Unable to write teams CSV.");return false;} f<<"TeamNo,TeamLogo,TeamName,TeamMembers,TeamRank\n"; for(const auto& t:g_teams) f<<t.id<<",Logo-"<<t.logoId<<","<<csvSafe(t.name)<<","<<csvSafe(t.members)<<","<<t.seedRank<<"\n"; return true; }
-static bool writeMatches(const char* path){ std::ofstream f(path); if(!f){setError("Unable to write matches CSV.");return false;} f<<"MatchNo,Round,Team1No,Team1,Team1Rank,Team2No,Team2,Team2Rank,Date,Time,Status,WinnerNo,Winner\n"; for(const auto& m:g_matches) f<<m.id<<","<<m.roundName<<","<<m.teamA.id<<","<<csvSafe(m.teamA.name)<<","<<m.teamA.seedRank<<","<<m.teamB.id<<","<<csvSafe(m.teamB.name)<<","<<m.teamB.seedRank<<","<<m.dateText<<","<<m.timeText<<","<<statusText(m)<<","<<(m.completed?std::to_string(m.winner.id):"0")<<","<<(m.completed?csvSafe(m.winner.name):"TBD")<<"\n"; return true; }
-static bool writeLogs(const char* path){ std::ofstream f(path); if(!f){setError("Unable to write logs CSV.");return false;} f<<"No,Event\n"; for(const auto& l:g_logs) f<<l.id<<","<<csvSafe(l.message)<<"\n"; return true; }
+static bool writeTeams(const char* path){ if(!hasWritablePath(path,"Teams CSV"))return false; std::ofstream f(path); if(!f){setError("Unable to write teams CSV.");return false;} f<<"TeamNo,TeamLogo,TeamName,TeamMembers,TeamRank\n"; for(const auto& t:g_teams) f<<t.id<<",Logo-"<<t.logoId<<","<<csvSafe(t.name)<<","<<csvSafe(t.members)<<","<<t.seedRank<<"\n"; return true; }
+static bool writeMatches(const char* path){ if(!hasWritablePath(path,"Matches CSV"))return false; std::ofstream f(path); if(!f){setError("Unable to write matches CSV.");return false;} f<<"MatchNo,Round,Team1No,Team1,Team1Rank,Team2No,Team2,Team2Rank,Date,Time,Status,WinnerNo,Winner\n"; for(const auto& m:g_matches) f<<m.id<<","<<m.roundName<<","<<m.teamA.id<<","<<csvSafe(m.teamA.name)<<","<<m.teamA.seedRank<<","<<m.teamB.id<<","<<csvSafe(m.teamB.name)<<","<<m.teamB.seedRank<<","<<m.dateText<<","<<m.timeText<<","<<statusText(m)<<","<<(m.completed?std::to_string(m.winner.id):"0")<<","<<(m.completed?csvSafe(m.winner.name):"TBD")<<"\n"; return true; }
+static bool writeLogs(const char* path){ if(!hasWritablePath(path,"Logs CSV"))return false; std::ofstream f(path); if(!f){setError("Unable to write logs CSV.");return false;} f<<"No,Event\n"; for(const auto& l:g_logs) f<<l.id<<","<<csvSafe(l.message)<<"\n"; return true; }
 static bool writeAll(const char* mp,const char* lp){ if(mp&&std::string(mp).size()>0&&!writeMatches(mp))return false; if(lp&&std::string(lp).size()>0&&!writeLogs(lp))return false; return true; }
 
 static bool loadTeamsFile(const std::string& path,std::vector<Team>& loaded){
@@ -78,9 +81,11 @@ static bool loadTeamsFile(const std::string& path,std::vector<Team>& loaded){
     while(std::getline(f,line)){
         line=trim(line); if(line.empty())continue; if(line.find("TeamNo")!=std::string::npos||line.find("Id,")==0)continue;
         auto parts=split(line,','); if(parts.size()<3)continue; Team t; t.id=autoId; t.logoId=autoId;
-        bool firstNum=!parts[0].empty()&&std::all_of(parts[0].begin(),parts[0].end(),[](unsigned char ch){return std::isdigit(ch);});
-        if(firstNum&&parts.size()>=4){ t.id=std::stoi(parts[0]); t.name=parts[1]; t.seedRank=std::stoi(parts[2]); t.members=parts[3]; }
-        else { t.name=parts[0]; t.members=parts[1]; t.seedRank=std::stoi(parts[2]); }
+        int parsedId=0, parsedRank=0;
+        bool firstNum=parsePositiveInt(parts[0],parsedId);
+        if(firstNum&&parts.size()>=4){ if(!parsePositiveInt(parts[2],parsedRank))continue; t.id=parsedId; t.name=parts[1]; t.seedRank=parsedRank; t.members=parts[3]; }
+        else { if(!parsePositiveInt(parts[2],parsedRank))continue; t.name=parts[0]; t.members=parts[1]; t.seedRank=parsedRank; }
+        if(t.name.empty()||t.members.empty())continue;
         t.logoId=((autoId-1)%22)+1; loaded.push_back(t); autoId++;
     }
     return true;
@@ -96,7 +101,7 @@ static int currentReadyRound(){
 }
 
 extern "C" API int LoadTeams(const char* teamFilePath){
-    try{ g_lastError.clear(); std::vector<Team> loaded; if(!loadTeamsFile(teamFilePath,loaded)){setError("Unable to open team file.");return 0;} if(loaded.size()!=16){setError("The scheduler requires exactly 16 teams.");return 0;} std::sort(loaded.begin(),loaded.end(),[](const Team&a,const Team&b){return a.seedRank<b.seedRank;}); for(size_t i=0;i<loaded.size();++i){loaded[i].id=(int)i+1; loaded[i].logoId=(int)(i%22)+1;} g_teams=loaded; g_matches.clear(); g_logs.clear(); g_nextLogId=1; logEvent("Loaded 16 teams."); return 1; }catch(const std::exception& ex){setError(ex.what());return 0;}
+    try{ g_lastError.clear(); if(!teamFilePath||std::string(teamFilePath).empty()){setError("Team file path is empty.");return 0;} std::vector<Team> loaded; if(!loadTeamsFile(teamFilePath,loaded)){setError("Unable to open team file.");return 0;} if(loaded.size()!=16){setError("The scheduler requires exactly 16 valid teams.");return 0;} std::sort(loaded.begin(),loaded.end(),[](const Team&a,const Team&b){return a.seedRank<b.seedRank;}); for(size_t i=0;i<loaded.size();++i){loaded[i].id=(int)i+1; loaded[i].logoId=(int)(i%22)+1;} g_teams=loaded; g_matches.clear(); g_logs.clear(); g_nextLogId=1; logEvent("Loaded 16 teams."); return 1; }catch(const std::exception& ex){setError(ex.what());return 0;}
 }
 
 extern "C" API int GenerateSchedule(const char* matchesCsvPath,const char* logCsvPath){
@@ -131,17 +136,17 @@ extern "C" API int ExportLogs(const char* p){ try{g_lastError.clear(); return wr
 
 extern "C" API int ExportReport(const char* reportHtmlPath){
     try{
-        g_lastError.clear(); std::ofstream f(reportHtmlPath); if(!f){setError("Unable to write HTML report.");return 0;}
+        g_lastError.clear(); if(!hasWritablePath(reportHtmlPath,"Report HTML"))return 0; std::ofstream f(reportHtmlPath); if(!f){setError("Unable to write HTML report.");return 0;}
         int total=(int)g_matches.size(), done=completedMatches(); std::string champ=championName();
         f<<"<!doctype html><html><head><meta charset='utf-8'><title>Competition Scheduler Tournament Report</title><style>";
         f<<"body{font-family:Segoe UI,Arial,sans-serif;background:#0f1113;color:#e8edf2;margin:0;padding:32px}.page{max-width:1100px;margin:auto}h1{color:#53ebb1;margin-bottom:4px}h2{color:#53ebb1;margin-top:28px;border-bottom:1px solid #2a2f33;padding-bottom:8px}.subtitle{color:#b4bbc2;margin-bottom:24px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}.card{background:#1a1d1f;padding:18px;border-radius:12px;border:1px solid #2a2f33}.metric{font-size:28px;font-weight:700;color:#53ebb1}.label{color:#b4bbc2;font-size:13px;margin-top:4px}table{width:100%;border-collapse:collapse;background:#1a1d1f;margin-top:12px;border-radius:12px;overflow:hidden}th,td{padding:10px 12px;border-bottom:1px solid #2a2f33;text-align:left;font-size:13px}th{background:#24292d;color:#53ebb1}tr:last-child td{border-bottom:none}.completed{color:#ffd166;font-weight:700}.ready{color:#53ebb1;font-weight:700}.pending{color:#b4bbc2}.footer{margin-top:30px;color:#b4bbc2;font-size:12px;text-align:center}";
-        f<<"</style></head><body><div class='page'><h1>Competition Scheduler Tournament Report</h1><div class='subtitle'>16-Team Tournament • C++ DLL Backend + C# WinForms Frontend</div>";
+        f<<"</style></head><body><div class='page'><h1>Competition Scheduler Tournament Report</h1><div class='subtitle'>16-Team Tournament - C++ DLL Backend + C# WinForms Frontend</div>";
         f<<"<div class='cards'><div class='card'><div class='metric'>"<<g_teams.size()<<"</div><div class='label'>Participating Teams</div></div><div class='card'><div class='metric'>"<<total<<"</div><div class='label'>Scheduled Matches</div></div><div class='card'><div class='metric'>"<<done<<"</div><div class='label'>Completed Matches</div></div><div class='card'><div class='metric'>"<<htmlEscape(champ)<<"</div><div class='label'>Champion</div></div></div>";
         f<<"<h2>Participating Teams</h2><table><tr><th>No.</th><th>Team</th><th>Rank</th><th>Members</th></tr>"; for(const auto& t:g_teams) f<<"<tr><td>"<<t.id<<"</td><td>"<<htmlEscape(t.name)<<"</td><td>"<<t.seedRank<<"</td><td>"<<htmlEscape(t.members)<<"</td></tr>"; f<<"</table>";
         f<<"<h2>Match Schedule</h2><table><tr><th>Match</th><th>Round</th><th>Team 1</th><th>Team 2</th><th>Date</th><th>Time</th><th>Status</th><th>Winner</th></tr>"; for(const auto& m:g_matches){std::string st=statusText(m),cls=st=="Completed"?"completed":(st=="Ready"?"ready":"pending"); f<<"<tr><td>Match "<<m.id<<"</td><td>"<<htmlEscape(m.roundName)<<"</td><td>"<<htmlEscape(m.teamA.name)<<"</td><td>"<<htmlEscape(m.teamB.name)<<"</td><td>"<<m.dateText<<"</td><td>"<<m.timeText<<"</td><td class='"<<cls<<"'>"<<st<<"</td><td>"<<(m.completed?htmlEscape(m.winner.name):"TBD")<<"</td></tr>";} f<<"</table>";
         f<<"<h2>Round Results</h2>"; for(int r=1;r<=4;r++){f<<"<h3>"<<htmlEscape(roundName(r))<<"</h3><table><tr><th>Match</th><th>Fixture</th><th>Status</th><th>Winner</th></tr>"; for(const auto& m:g_matches) if(m.round==r) f<<"<tr><td>Match "<<m.id<<"</td><td>"<<htmlEscape(m.teamA.name)<<" vs "<<htmlEscape(m.teamB.name)<<"</td><td>"<<statusText(m)<<"</td><td>"<<(m.completed?htmlEscape(m.winner.name):"TBD")<<"</td></tr>"; f<<"</table>";}
         f<<"<h2>System Activity Log</h2><table><tr><th>No.</th><th>Event</th></tr>"; for(const auto& l:g_logs) f<<"<tr><td>"<<l.id<<"</td><td>"<<htmlEscape(l.message)<<"</td></tr>"; f<<"</table>";
-        f<<"<h2>Technical Notes</h2><div class='card'>Backend: C++ DLL<br>Frontend: C# WinForms<br>Data Structures: vector, queue, sorting, classes/structs<br>Tournament Model: Fixed 16-team knockout bracket with 15 total matches.</div><div class='footer'>Competition Scheduler • Data Structures Academic Project</div></div></body></html>";
+        f<<"<h2>Technical Notes</h2><div class='card'>Backend: C++ DLL<br>Frontend: C# WinForms<br>Data Structures: vector, queue, sorting, classes/structs<br>Tournament Model: Fixed 16-team knockout bracket with 15 total matches.</div><div class='footer'>Competition Scheduler - Data Structures Academic Project</div></div></body></html>";
         return 1;
     }catch(const std::exception& ex){setError(ex.what());return 0;}
 }

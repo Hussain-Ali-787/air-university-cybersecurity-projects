@@ -1,7 +1,8 @@
 @echo off
 setlocal
+cd /d "%~dp0"
 if not exist build mkdir build
-g++ -std=c++17 -O2 -shared ^
+g++ -std=c++17 -O2 -Wall -Wextra -pedantic -shared ^
     -Iinclude ^
     src\CompetitionSchedulerBackend.cpp ^
     -o build\CompetitionSchedulerBackend.dll ^

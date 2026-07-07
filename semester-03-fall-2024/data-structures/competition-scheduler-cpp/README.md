@@ -14,9 +14,9 @@ The original coursework project was a C++/CLI Windows Forms application for mana
 
 ```text
 C# WinForms Frontend
-        ↓ P/Invoke
+        | P/Invoke
 C++ DLL Backend
-        ↓
+        |
 Data Structures Logic
 ```
 
@@ -38,14 +38,14 @@ Data Structures Logic
 ## Build Backend
 
 ```powershell
-cd backend-cpp-dll
+cd reformed\backend-cpp-dll
 .\build.bat
 ```
 
 ## Run Frontend
 
 ```powershell
-cd frontend-csharp-winforms
+cd reformed\frontend-csharp-winforms
 dotnet run
 ```
 
@@ -64,16 +64,18 @@ Team Alpha, Ayan;Bilal;Hamza, 1
 ## Structure
 
 ```text
-competition_scheduler_hybrid_dll_v3/
-├── README.md
-├── PROJECT_NOTES.md
-├── .gitignore
-├── backend-cpp-dll/
-├── frontend-csharp-winforms/
-├── shared-data/
-├── output/
-├── docs/
-└── screenshots/
+competition-scheduler-cpp/
+|-- README.md
+|-- PROJECT_NOTES.md
+|-- .gitignore
+|-- Classes/
+|-- original/
+|-- reformed/
+|   |-- backend-cpp-dll/
+|   `-- frontend-csharp-winforms/
+|-- shared-data/
+|-- docs/
+`-- screenshots/
 ```
 
 ## Notes
