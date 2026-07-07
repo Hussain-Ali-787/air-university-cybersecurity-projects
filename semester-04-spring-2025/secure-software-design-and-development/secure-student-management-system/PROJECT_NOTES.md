@@ -28,8 +28,19 @@ instance/firstapp.db
 - Delete operation now uses POST instead of GET.
 - Default admin/admin creation was removed.
 - Admin creation from environment variables is optional.
+- Production startup now requires a configured `SECRET_KEY`.
+- Login, logout, and first-admin registration clear stale session data.
+- Missing student records now return explicit 404 responses through the current SQLAlchemy session API.
 - Runtime database is excluded from GitHub.
 - All application code is placed inside `src/`.
+
+## Technical Review - 2026-07-07
+
+- Reviewed Flask app factory, models, forms, templates, Dockerfile, and run guide.
+- Confirmed CSRF coverage on registration, login, dashboard create, update, delete, logout, and dashboard redirect forms.
+- Hardened session handling to reduce stale-session and session-fixation risk.
+- Added a production guard so the app cannot run with the development fallback secret.
+- Replaced legacy record lookup helpers with explicit `db.session.get(...)` and 404 handling.
 
 ## Application Code
 

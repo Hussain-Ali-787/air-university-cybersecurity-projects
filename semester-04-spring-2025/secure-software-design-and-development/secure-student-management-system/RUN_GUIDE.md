@@ -19,6 +19,8 @@ ADMIN_USERNAME=adminuser
 ADMIN_PASSWORD=StrongPassword123
 ```
 
+Production mode will not start with the development fallback `SECRET_KEY`. Set a unique, high-entropy value before running the container.
+
 ### 2. Build Image
 
 ```powershell

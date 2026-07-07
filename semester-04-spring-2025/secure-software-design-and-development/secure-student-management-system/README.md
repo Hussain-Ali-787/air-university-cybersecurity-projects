@@ -29,29 +29,29 @@ The final repository keeps all application code inside the `src/` directory and 
 
 ```text
 secure-student-management-system/
-├── src/
-│   ├── app.py
-│   ├── forms.py
-│   ├── create_db.py
-│   ├── templates/
-│   │   ├── dashboard.html
-│   │   ├── index.html
-│   │   ├── login.html
-│   │   ├── register.html
-│   │   └── update.html
-│   └── static/
-├── docs/
-│   ├── secure-student-management-system-report.docx
-│   └── secure-student-management-system-report.pdf
-├── screenshots/
-├── requirements.txt
-├── Dockerfile
-├── .dockerignore
-├── .env.example
-├── README.md
-├── PROJECT_NOTES.md
-├── RUN_GUIDE.md
-└── .gitignore
+|-- src/
+|   |-- app.py
+|   |-- forms.py
+|   |-- create_db.py
+|   |-- templates/
+|   |   |-- dashboard.html
+|   |   |-- index.html
+|   |   |-- login.html
+|   |   |-- register.html
+|   |   `-- update.html
+|   `-- static/
+|-- docs/
+|   |-- secure-student-management-system-report.docx
+|   `-- secure-student-management-system-report.pdf
+|-- screenshots/
+|-- requirements.txt
+|-- Dockerfile
+|-- .dockerignore
+|-- .env.example
+|-- README.md
+|-- PROJECT_NOTES.md
+|-- RUN_GUIDE.md
+`-- .gitignore
 ```
 
 ## UI Asset Update
@@ -80,6 +80,8 @@ The Air University logo is stored locally at `src/static/img/aulogo.png` and is 
 | CSRF | Removed CSRF exemptions and added CSRF tokens |
 | Delete action | Changed delete from GET to POST |
 | Sessions | Enabled HTTPOnly, SameSite, and environment-based Secure cookies |
+| Production config | Blocks production startup if `SECRET_KEY` is left as the development fallback |
+| Record lookups | Uses explicit 404 handling for missing student records |
 | Repository hygiene | Removed `.git/`, virtual environment, database, and cache files |
 | Code organization | Moved all application code into `src/` |
 

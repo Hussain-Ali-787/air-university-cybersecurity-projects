@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, session, url_for, flash
+from flask import Flask, abort, render_template, redirect, session, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CSRFProtect
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -36,6 +36,19 @@ def _default_sqlite_uri() -> str:
     return "sqlite:///" + db_path.replace("\\", "/")
 
 
+def _require_safe_secret(flask_env: str, secret_key: str) -> None:
+    """Prevent production from running with the development fallback secret."""
+    if flask_env == "production" and secret_key == "change-this-development-secret":
+        raise RuntimeError("SECRET_KEY must be set to a strong value in production.")
+
+
+def _get_student_or_404(student_id: int):
+    student = db.session.get(Students, student_id)
+    if student is None:
+        abort(404)
+    return student
+
+
 def seed_admin_from_env() -> None:
     """Create the first admin from environment variables if provided."""
     admin_username = os.getenv("ADMIN_USERNAME")
@@ -59,6 +72,7 @@ def create_app():
     flask_env = os.getenv("FLASK_ENV", "development").lower()
     secret_key = os.getenv("SECRET_KEY", "change-this-development-secret")
     csrf_secret = os.getenv("WTF_CSRF_SECRET_KEY", secret_key)
+    _require_safe_secret(flask_env, secret_key)
 
     app.config.update(
         SECRET_KEY=secret_key,
@@ -104,6 +118,7 @@ def create_app():
             )
             db.session.add(admin)
             db.session.commit()
+            session.clear()
             session["admin"] = admin.username
             flash("Admin account created successfully.", "success")
             return redirect(url_for("dashboard"))
@@ -134,7 +149,7 @@ def create_app():
 
     @app.route("/logout", methods=["POST"])
     def logout():
-        session.pop("admin", None)
+        session.clear()
         flash("You have been logged out.", "info")
         return redirect(url_for("login"))
 
@@ -165,7 +180,7 @@ def create_app():
         if "admin" not in session:
             return redirect(url_for("login"))
 
-        student = Students.query.get_or_404(id)
+        student = _get_student_or_404(id)
         form = StudentForm(obj=student)
 
         if form.validate_on_submit():
@@ -182,7 +197,7 @@ def create_app():
         if "admin" not in session:
             return redirect(url_for("login"))
 
-        student = Students.query.get_or_404(id)
+        student = _get_student_or_404(id)
         db.session.delete(student)
         db.session.commit()
         flash("Student record deleted successfully.", "info")
