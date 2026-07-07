@@ -1,13 +1,35 @@
 # Semester 5 - Summer 2025
 
-This folder is reserved for Summer 2025 internship material.
+Semester 5 is reserved for Summer 2025 internship material.
 
-## Included Area
+## Semester Information
+
+| Field | Details |
+|---|---|
+| Semester | 5 |
+| Session | Summer 2025 |
+| Program | BS Cyber Security |
+| University | Air University Islamabad |
+| Status | Placeholder / partial |
+
+## Areas
 
 | Area | Folder | Status |
 |---|---|---|
 | Internship | [internship/](internship/) | Imported placeholder |
 
-## Notes
+## Planned Structure
 
-Internship artifacts should be reviewed carefully before being added to a public repository. Do not commit confidential employer material, private client data, credentials, internal screenshots, or restricted documents.
+```text
+internship/
+  assignments/
+  labs/
+  presentations/
+  projects/
+  reports/
+  screenshots/
+```
+
+## Safety and Privacy
+
+Internship artifacts must be reviewed carefully before public upload. Do not commit confidential employer material, private client data, credentials, internal screenshots, restricted documents, or operational details.

@@ -1,11 +1,25 @@
 # Semester 7 - Spring 2026
 
-This folder is reserved for future Semester 7 coursework.
+Semester 7 is reserved for future coursework.
 
-## Status
+## Semester Information
 
-Planned. No public project artifacts have been added yet.
+| Field | Details |
+|---|---|
+| Semester | 7 |
+| Session | Spring 2026 |
+| Program | BS Cyber Security |
+| University | Air University Islamabad |
+| Status | Placeholder |
 
-## Notes
+## Current Status
 
-Add future projects using the repository-wide standards in [../PROJECT_STANDARDS.md](../PROJECT_STANDARDS.md).
+No public project artifacts have been added yet.
+
+## Future Additions
+
+Future projects should follow the repository-wide standards in [../PROJECT_STANDARDS.md](../PROJECT_STANDARDS.md).
+
+## Safety and Privacy
+
+Review all future artifacts before upload. Do not commit secrets, private data, unsafe cybersecurity artifacts, or generated build/runtime files.

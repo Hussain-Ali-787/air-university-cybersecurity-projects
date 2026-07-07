@@ -1,6 +1,16 @@
 # Semester 6 - Fall 2025
 
-This folder is reserved for Semester 6 coursework.
+Semester 6 is reserved for upcoming or not-yet-imported coursework.
+
+## Semester Information
+
+| Field | Details |
+|---|---|
+| Semester | 6 |
+| Session | Fall 2025 |
+| Program | BS Cyber Security |
+| University | Air University Islamabad |
+| Status | Placeholder |
 
 ## Courses
 
@@ -13,6 +23,6 @@ This folder is reserved for Semester 6 coursework.
 | Expository Writing | [expository-writing/](expository-writing/) | Planned |
 | Parallel and Distributed Computing | [parallel-and-distributed-computing/](parallel-and-distributed-computing/) | Planned |
 
-## Notes
+## Safety and Privacy
 
-Projects will be added only after public-safety review. For cybersecurity and forensics courses, avoid committing real evidence images, private logs, packet captures, credentials, malware samples, or unauthorized target data.
+Future projects should be added only after public-safety review. For cybersecurity, forensics, and AI work, avoid committing private datasets, credentials, forensic images, packet captures, malware samples, unauthorized target data, or internal service details.
